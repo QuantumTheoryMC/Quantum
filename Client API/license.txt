@@ -1,0 +1,29 @@
+mod-name:
+mod-id:
+
+Minecraft Modding API (unofficial)
+
+Developer License version 1.0
+
+Terms of Service:
+
+"You" as in you, the developer.
+
+1. You may not modify the API in part or whole in any way. Exception: you may create Pull Requests.
+That is, modification of any part of the API, addition of, or removal of code is allowed for a Pull Request.
+
+2. You may not redistribute this API, in part or whole, in any way. You may however, fork the API on GitHub.
+
+3. You may not create mods with this API for malicious intent.
+
+4. You may ONLY send a direct link to this API when linking any part of this API.
+
+5. You may not use any code in this API, in part or whole, in another mod not made with this API.
+
+Distribution of Minecraft copies is illegal.
+
+Malicious intent is defined as:
+Any mod that acts like a virus.
+Any mod that attacks the client that it is installed on or the server it is installed to.
+
+This license must be present within a mod's jar file to work correctly.
