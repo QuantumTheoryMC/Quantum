@@ -170,7 +170,7 @@ public interface Block {
 	//isAssociatedBlock(AbstractBlock other)
 	boolean isVariant(Block block);
 
-	<B extends Block> List<B> getVariants();
+	List<Block> getVariants();
 	// BlockState getCurrentState()
 	// BlockState getDefaultState()
 

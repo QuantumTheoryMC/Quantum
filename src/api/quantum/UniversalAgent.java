@@ -24,6 +24,8 @@
 package api.quantum;
 
 import api.quantum.log.Logger;
+import api.quantum.meta.Untested;
+import javassist.CannotCompileException;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.bytecode.ClassFile;
@@ -38,11 +40,16 @@ import java.util.stream.Stream;
 /**
  * @author link
  */
+@Untested
 class UniversalAgent implements java.lang.instrument.ClassFileTransformer {
 
-	UniversalAgent() throws FileNotFoundException {
+	private final ClassModifier modifier;
+
+	UniversalAgent(ClassModifier modifier) throws FileNotFoundException {
+		this.modifier = modifier;
 	}
 
+	@Untested
 	@Override
 	public byte[] transform(ClassLoader loader, String className, Class<?> classDef, ProtectionDomain domain,
 	                        byte[] classfileBuffer) throws IllegalClassFormatException {
@@ -51,11 +58,16 @@ class UniversalAgent implements java.lang.instrument.ClassFileTransformer {
 			Logger.getLogger().log(this, "Modifying class '" + className + "'.");
 			ClassFile classFile = new ClassFile((DataInputStream) Stream.of(classfileBuffer));
 			CtClass ct = cp.makeClass(classFile);
+			try {
+				return modifier.modify(ct).toBytecode();
+			} catch (CannotCompileException e) {
+				Logger.getLogger().log(this, e, Logger.Severity.Level.SEVERE, "There is something wrong with the ClassModifier for this type: " + e.getLocalizedMessage());
+				return classfileBuffer;
+			}
 		} catch (IOException ex) {
 			Logger.getLogger().log(this, ex, Logger.Severity.Level.SEVERE, "An Unexpected IOException occured: " + ex.getLocalizedMessage());
+			return classfileBuffer;
 		}
-
-		return null;
 
 	}
 

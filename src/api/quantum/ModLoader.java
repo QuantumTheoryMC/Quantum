@@ -26,7 +26,6 @@ package api.quantum;
 import api.quantum.log.Logger;
 import api.quantum.meta.WIP;
 import api.quantum.mod.QuantumMod;
-import javassist.NotFoundException;
 
 import java.io.File;
 import java.io.IOException;
@@ -62,8 +61,6 @@ enum ModLoader {
 	 * @param pathName
 	 * 		the mod to load
 	 * @return the loaded mod
-	 * @throws NotFoundException
-	 * 		If the mod or mods do not exist
 	 * @throws IOException
 	 * 		If for some reason the mod file(s) could not be read.
 	 */
@@ -77,13 +74,13 @@ enum ModLoader {
 		// the names of classes mapped to "Name" attributes
 		Map<Object, Object> classes = manifest.getAttributes("Name");
 		Logger.getSystemLogger().log(ModLoader.class, "Loaded java module \"" + pathName + "\"");
-		// load all the classes from the jar
+		// load all the classes from the java module
 		classes.forEach((attributeName, attributeValue) -> {
 			assert attributeValue instanceof String : "Not an Attributes object, or class Attributes was refactored.";
 			try {
 				loader.loadClass(((String) attributeName).replace('/', '.'));
 			} catch (ClassNotFoundException e) {
-				ClassFormatError clFormatErr = new ClassFormatError("This JarFile is corrupted or improperly formatted. Please report this error to http://github.com/QuantumTheoryMC/QuantumAPI/issues");
+				ClassFormatError clFormatErr = new ClassFormatError("This JarFile is corrupted or improperly formatted. Please report this error to http://github.com/QuantumTheoryMC/QuantumAPI");
 				Logger.getSystemLogger().log(ModLoader.class, e, Logger.Severity.ERROR, Logger.Severity.Context.INTERNAL, Logger.Severity.Level.FATAL, "Failed to load class \"" + attributeName + "\"");
 			}
 		});

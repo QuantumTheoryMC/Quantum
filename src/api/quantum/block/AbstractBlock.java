@@ -69,7 +69,7 @@ public abstract class AbstractBlock implements Block {
 			}
 
 			@Override
-			public List<AbstractBlock> getVariants() {
+			public List<Block> getVariants() {
 				List<AbstractBlock> list = new ArrayList<>(1);
 				return null;
 			}
@@ -521,7 +521,7 @@ public abstract class AbstractBlock implements Block {
 			}
 		}
 
-		static BlockInfo create(String name, BlockType type, BlockConstraints constraints, BlockLighting lighting, ToolInfo toolInfo) throws BlockInitException {
+		public static BlockInfo create(String name, BlockType type, BlockConstraints constraints, BlockLighting lighting, ToolInfo toolInfo) throws BlockInitException {
 			return new BlockInfo(name, type, constraints, lighting, toolInfo);
 		}
 
@@ -545,13 +545,13 @@ public abstract class AbstractBlock implements Block {
 			return toolInfo;
 		}
 
-		final class BlockConstraints {
+		public static final class BlockConstraints {
 
 			private final float minWidth, minHeight, minDepth,
 					maxWidth, maxHeight, maxDepth;
 
-			BlockConstraints(float minWidth, float maxWidth, float minHeight, float maxHeight, float minDepth,
-			                 float maxDepth) {
+			public BlockConstraints(float minWidth, float maxWidth, float minHeight, float maxHeight, float minDepth,
+			                        float maxDepth) {
 				this.minWidth = minWidth;
 				this.minHeight = minHeight;
 				this.minDepth = minDepth;
@@ -585,12 +585,12 @@ public abstract class AbstractBlock implements Block {
 			}
 		}
 
-		final class BlockLighting {
+		public static final class BlockLighting {
 
 			private final boolean opaque;
 			private final int opacity, lightEmission;
 
-			BlockLighting(boolean opaque, int opacity, int lightEmission) {
+			public BlockLighting(boolean opaque, int opacity, int lightEmission) {
 				this.opaque = opaque;
 				this.opacity = opacity;
 				this.lightEmission = lightEmission;
@@ -609,12 +609,12 @@ public abstract class AbstractBlock implements Block {
 			}
 		}
 
-		final class ToolInfo {
+		public static final class ToolInfo {
 
 			private final int hardness, resistance, particleGravity;
 			private final boolean silkTouch;
 
-			ToolInfo(int hardness, int resistance, int particleGravity, boolean silkTouch) {
+			public ToolInfo(int hardness, int resistance, int particleGravity, boolean silkTouch) {
 				this.hardness = hardness;
 				this.resistance = resistance;
 				this.particleGravity = particleGravity;

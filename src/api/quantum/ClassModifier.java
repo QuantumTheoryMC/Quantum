@@ -20,30 +20,26 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * Created file on 12/29/15 at 4:47 PM.
+ *
+ * This file is part of Quantum API
  */
 package api.quantum;
 
-import api.quantum.block.AbstractBlock;
-import api.quantum.block.Block;
-import api.quantum.log.Logger;
-
-import java.util.Random;
+import javassist.CtClass;
 
 /**
  * @author link
  */
-public final class Test {
-
-	public static void main(String... args) {
-		Block block = AbstractBlock.getBlock("minecraft:dirt");
-		Logger.getLogger().log(Test.class, "Are stats enabled: " + block.areStatsEnabled());
-		Logger.getLogger().log(Test.class, "Can Update: " + block.canUpdate());
-		Logger.getLogger().log(Test.class, "Ambient Occlusion: " + block.getAmbientOcclusion());
-		Logger.getLogger().log(Test.class, "BlockColor: " + block.getBlockColor());
-		Logger.getLogger().log(Test.class, "BlockType: " + block.getBlockType());
-		Logger.getLogger().log(Test.class, "Brightness: " + block.getBrightness(0, 0, 0));
-		Logger.getLogger().log(Test.class, "Drop Count: " + block.getDropCount(new Random()));
-		Logger.getLogger().log(Test.class, "Full Name" + block.getFullName());
-		Logger.getLogger().log(Test.class, "Hardness : " + block.getHardness());
-	}
+@FunctionalInterface
+public interface ClassModifier {
+	/**
+	 * Modifies the given class.
+	 *
+	 * @param ctClass
+	 * 		the class to modify
+	 * @return the modified class representation
+	 */
+	CtClass modify(CtClass ctClass);
 }

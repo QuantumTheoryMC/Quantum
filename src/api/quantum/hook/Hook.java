@@ -23,6 +23,7 @@
  */
 package api.quantum.hook;
 
+import api.quantum.ClassModifier;
 import api.quantum.meta.Untested;
 
 import java.lang.reflect.Method;
@@ -37,7 +38,7 @@ import java.util.Map;
  * @author link
  */
 @Untested
-public interface Hook<R> {
+public interface Hook<R> extends ClassModifier {
 
 	Map<Method, ArrayList<Hook<?>>> HOOKS = new HashMap<>();
 
