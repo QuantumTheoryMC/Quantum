@@ -31,7 +31,6 @@ import javassist.CtClass;
 import javassist.bytecode.ClassFile;
 
 import java.io.DataInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.instrument.IllegalClassFormatException;
 import java.security.ProtectionDomain;
@@ -40,12 +39,13 @@ import java.util.stream.Stream;
 /**
  * @author link
  */
-@Untested
 class UniversalAgent implements java.lang.instrument.ClassFileTransformer {
 
+	private final Class<?> modify;
 	private final ClassModifier modifier;
 
-	UniversalAgent(ClassModifier modifier) throws FileNotFoundException {
+	UniversalAgent(Class<?> modify, ClassModifier modifier) {
+		this.modify = modify;
 		this.modifier = modifier;
 	}
 
@@ -53,13 +53,21 @@ class UniversalAgent implements java.lang.instrument.ClassFileTransformer {
 	@Override
 	public byte[] transform(ClassLoader loader, String className, Class<?> classDef, ProtectionDomain domain,
 	                        byte[] classfileBuffer) throws IllegalClassFormatException {
+		if (classDef == null && className == null)
+			throw new NullPointerException("The given class was null");
+		if (modify != classDef) {
+			Logger.getLogger().log(this, "Current Class: " + className);
+			return classfileBuffer;
+		}
+
 		try {
 			ClassPool cp = ClassPool.getDefault();
-			Logger.getLogger().log(this, "Modifying class '" + className + "'.");
+			Logger.getLogger().log(this, "Modifying class \"" + className + "\".");
 			ClassFile classFile = new ClassFile((DataInputStream) Stream.of(classfileBuffer));
 			CtClass ct = cp.makeClass(classFile);
 			try {
-				return modifier.modify(ct).toBytecode();
+				modifier.modify(ct);
+				return ct.toBytecode();
 			} catch (CannotCompileException e) {
 				Logger.getLogger().log(this, e, Logger.Severity.Level.SEVERE, "There is something wrong with the ClassModifier for this type: " + e.getLocalizedMessage());
 				return classfileBuffer;

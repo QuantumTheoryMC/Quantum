@@ -20,52 +20,35 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * Created file on 12/29/15 at 5:18 PM.
+ *
+ * This file is part of Quantum API
  */
 package api.quantum;
 
-import api.quantum.hook.Hook;
-import api.quantum.meta.WIP;
-
-import java.util.List;
-import java.util.Map;
+import api.quantum.log.Logger;
+import javassist.CannotCompileException;
+import javassist.CtClass;
+import javassist.CtMethod;
+import javassist.NotFoundException;
 
 /**
+ * ClassModifier for {@link net.minecraft.client.main.Main}
+ *
  * @author link
  */
-@WIP(description = "A lot of missing runtime information",
-     unfinished = {"QuantumAPI.info"})
-public class QuantumAPI {
-
-	private static final QuantumAPI info = ModLoader.createAPI();
-	private final String apiVersion, mcVersion;
-	private final List<Hook<?>> mainHooks;
-	private final Map<String, List<Hook<?>>> methodHooks;
-
-	@WIP
-	QuantumAPI(String apiVersion, String minecraftVersion, List<Hook<?>> mainHooks,
-	           Map<String, List<Hook<?>>> methodHooks) {
-		synchronized (info) {
-			this.apiVersion = apiVersion;
-			this.mcVersion = minecraftVersion;
-			this.mainHooks = mainHooks;
-			this.methodHooks = methodHooks;
+class MCMainClassModifier implements ClassModifier {
+	@Override
+	public void modify(CtClass ctClass) {
+		try {
+			CtMethod method = ctClass.getMethod("main", "([java/lang/String;)V");
+			// insert at beginning
+			method.insertBefore("api.quantum.QuantumAPI.getMainMethodHooks().forEach((hook) -> {" +
+					                    "   hook.run(null);" +
+					                    "});");
+		} catch (CannotCompileException | NotFoundException e) {
+			Logger.getLogger().log(this, "Failed to modify class \"" + ctClass.getSimpleName() + "\"");
 		}
 	}
-
-	public static String getAPIVersion() {
-		return info.apiVersion;
-	}
-
-	public static String getMinecraftVersion() {
-		return info.mcVersion;
-	}
-
-	public static List<Hook<?>> getMainMethodHooks() {
-		return info.mainHooks;
-	}
-
-	public static Map<String, List<Hook<?>>> getMethodHooks() {
-		return info.methodHooks;
-	}
-
 }

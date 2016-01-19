@@ -25,6 +25,7 @@ package api.quantum.hook;
 
 import api.quantum.ClassModifier;
 import api.quantum.meta.Untested;
+import javassist.CtClass;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -39,6 +40,27 @@ import java.util.Map;
  */
 @Untested
 public interface Hook<R> extends ClassModifier {
+
+	Hook<Void> EMPTY = new Hook<Void>() {
+		@Override
+		public Return<Void> run(Parameters params) {
+			return new Return<>(0);
+		}
+
+		@Override
+		public Method getMethod() {
+			try {
+				return Hook.class.getMethod("run", Parameters.class);
+			} catch (NoSuchMethodException e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+
+		@Override
+		public void modify(CtClass ctClass) {
+		}
+	};
 
 	Map<Method, ArrayList<Hook<?>>> HOOKS = new HashMap<>();
 

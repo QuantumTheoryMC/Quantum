@@ -16,6 +16,7 @@
           <root url="jar://$APPLICATION_HOME_DIR$/redist/annotations-java8.jar!/" />
         </CLASSES>
         <JAVADOC />
+        <LIBRARY_FILE />
         <SOURCES />
       </library>
     </orderEntry>

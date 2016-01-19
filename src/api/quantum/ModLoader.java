@@ -23,18 +23,19 @@
  */
 package api.quantum;
 
+import api.quantum.hook.Hook;
 import api.quantum.log.Logger;
 import api.quantum.meta.WIP;
 import api.quantum.mod.QuantumMod;
 
+import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
 import java.lang.instrument.Instrumentation;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
@@ -46,15 +47,18 @@ import java.util.jar.Manifest;
 enum ModLoader {
 	;
 
-	public static void premain(String args, Instrumentation inst) {
+	public static void premain(String args, Instrumentation inst) throws ClassNotFoundException, MalformedURLException {
 		Logger.getLogger().log(ModLoader.class, "Quantum API Mod Loader as Java Agent successfully initialized");
-		//inst.addTransformer(new UniversalAgent(root, clazz));
+		inst.addTransformer(new UniversalAgent(net.minecraft.client.main.Main.class, new MCMainClassModifier()));
 	}
 
-	public static void main(String... args) {
+	private static JarFile loadModule(String pathName) throws IOException {
+		// the class loader for the mod
+		ClassLoader loader = new URLClassLoader(new URL[]{new File(pathName).toURI().toURL()}, ModLoader.class.getClassLoader());
+		// the jar of the mod
+		return new JarFile(new File(pathName), false);
 
 	}
-
 	/**
 	 * Loads a mod from a java module.
 	 *
@@ -82,6 +86,13 @@ enum ModLoader {
 			} catch (ClassNotFoundException e) {
 				ClassFormatError clFormatErr = new ClassFormatError("This JarFile is corrupted or improperly formatted. Please report this error to http://github.com/QuantumTheoryMC/QuantumAPI");
 				Logger.getSystemLogger().log(ModLoader.class, e, Logger.Severity.ERROR, Logger.Severity.Context.INTERNAL, Logger.Severity.Level.FATAL, "Failed to load class \"" + attributeName + "\"");
+			} finally {
+				try {
+					((Closeable) loader).close();
+					jar.close();
+				} catch (IOException e) {
+					//
+				}
 			}
 		});
 		return null;
@@ -101,7 +112,9 @@ enum ModLoader {
 	}
 
 	static QuantumAPI createAPI() {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+		List<Hook<?>> mains = new ArrayList<>(1);
+		mains.add(Hook.EMPTY);
+		return new QuantumAPI("1a", "1.8", mains, new HashMap<>(1));
 	}
 
 	static class LoadResult {

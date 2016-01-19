@@ -30,6 +30,7 @@ import java.io.PrintStream;
 import java.time.LocalDateTime;
 import java.util.Stack;
 
+// TODO refactor to make more OOP (Already done in jGUI)
 public class Logger implements Thread.UncaughtExceptionHandler {
 
 	protected static final Logger SYSTEM = new Logger(System.in, System.out, System.err);

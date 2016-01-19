@@ -39,7 +39,7 @@ public interface ClassModifier {
 	 *
 	 * @param ctClass
 	 * 		the class to modify
-	 * @return the modified class representation
 	 */
-	CtClass modify(CtClass ctClass);
+	void modify(CtClass ctClass);
+
 }
