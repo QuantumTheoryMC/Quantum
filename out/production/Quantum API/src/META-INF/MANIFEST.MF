@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Premain-Class: api.quantum.ModLoader
+Main-Class: api.quantum.ModLoader
+Name: Quantum API

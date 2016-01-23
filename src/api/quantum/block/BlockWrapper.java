@@ -259,8 +259,8 @@ class BlockWrapper {
 			return wrappedBlock;
 		}
 
-		boolean canSilkHarvest() {
-			return silkTouch;
+        boolean canSilkHarvest(1) {
+            return silkTouch;
 		}
 
 		private BlockAccessor createBlock(BlockInfo info) {
