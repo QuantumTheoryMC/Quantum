@@ -8,15 +8,14 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="javassist" level="project" />
-    <orderEntry type="library" exported="" name="Minecraft" level="application" />
+    <orderEntry type="library" exported="" name="Mixin" level="project" />
+    <orderEntry type="library" name="Minecraft" level="application" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
           <root url="jar://$APPLICATION_HOME_DIR$/redist/annotations-java8.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <LIBRARY_FILE />
         <SOURCES />
       </library>
     </orderEntry>
