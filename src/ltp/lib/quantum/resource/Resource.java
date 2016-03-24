@@ -38,7 +38,6 @@ import java.util.WeakHashMap;
  * 		the type that this Resource represents
  * @author link
  */
-@Untested
 public class Resource<T> {
 
 	/**

@@ -35,7 +35,6 @@ import java.util.Map;
  *
  * @author link
  */
-@Untested()
 public final class BlockType {
 
 	public static final int FREE = 0, BREAK = 1, MOVE = 2;

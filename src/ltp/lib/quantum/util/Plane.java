@@ -29,7 +29,6 @@ import net.minecraft.util.EnumFacing;
 /**
  * @author link
  */
-@Untested
 @WIP(description = "Not yet finished",
      unfinished = {"Method wrappers"})
 public enum Plane {

@@ -23,6 +23,7 @@
  */
 package ltp.lib.quantum.error;
 
+import ltp.lib.quantum.Quantum;
 import ltp.lib.quantum.log.Logger;
 import ltp.lib.quantum.util.java.Serial;
 
@@ -33,10 +34,9 @@ import ltp.lib.quantum.util.java.Serial;
  *
  * @author link
  */
-@Untested
 public class QuantumThrowable extends Throwable {
 
-	private static final long serialVersionUID = Serial.createUID(QuantumAPI.class.hashCode(), QuantumThrowable.class);
+	private static final long serialVersionUID = Serial.createUID(Quantum.class.hashCode(), QuantumThrowable.class);
 	/**
 	 * The thrower of this Throwable
 	 */

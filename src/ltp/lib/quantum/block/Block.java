@@ -112,7 +112,7 @@ public interface Block {
 	//public void blockAdded(BlockState blockState, WorldLocation location)
 	//@Override
 	//public void onBlockBreak(BlockState blockState, WorldLocation location)
-	@Untested int getDropCount(Random random);
+	int getDropCount(Random random);
 
 	//@Untested
 	//public Item getDrop(BlockState blockState, Random random, int fortune)

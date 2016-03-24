@@ -158,7 +158,6 @@ class BlockWrapper {
 	// void blockAdded(BlockState blockState, WorldLocation location)
 	//@Override
 	// void onBlockBreak(BlockState blockState, WorldLocation location)
-	@Untested
 	final int getDropCount(Random random) {
 		return wrappedBlock.getWrappedBlock().quantityDropped(random);
 	}
@@ -258,7 +257,7 @@ class BlockWrapper {
 			return wrappedBlock;
 		}
 
-        boolean canSilkHarvest(1) {
+        boolean canSilkHarvest() {
             return silkTouch;
 		}
 
