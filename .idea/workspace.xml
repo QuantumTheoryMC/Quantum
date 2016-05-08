@@ -11,7 +11,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/production/Quantum API/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/Quantum API.iml" afterPath="$PROJECT_DIR$/out/production/Quantum API/Quantum API.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/production/Quantum API/src/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java" />
     </list>
     <ignored path="Quantum API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +48,8 @@
       <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4">
-              <caret line="44" column="75" selection-start-line="44" selection-start-column="75" selection-end-line="44" selection-end-column="75" />
+            <state vertical-scroll-proportion="0.42857143">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -362,15 +361,21 @@
       <option name="project" value="LOCAL" />
       <updated>1462718717206</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Rename method parameter &quot;ins&quot; to &quot;instrumentation&quot; in Bootstrap premain method">
+      <created>1462718794176</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1462718794176</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="31" width="1366" height="737" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2688822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2688822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31672025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -410,7 +415,8 @@
     <MESSAGE value="Rebase" />
     <MESSAGE value="Rename package to ltp.quantum" />
     <MESSAGE value="Create premain method in Bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create premain method in Bootstrap" />
+    <MESSAGE value="Rename method parameter &quot;ins&quot; to &quot;instrumentation&quot; in Bootstrap premain method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename method parameter &quot;ins&quot; to &quot;instrumentation&quot; in Bootstrap premain method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -804,8 +810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4">
-          <caret line="44" column="75" selection-start-line="44" selection-start-column="75" selection-end-line="44" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.42857143">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
