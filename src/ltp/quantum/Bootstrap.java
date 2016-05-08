@@ -33,7 +33,8 @@ import java.lang.instrument.Instrumentation;
 /**
  * @author link
  */
-public final class Bootstrap {
+public enum Bootstrap {
+	;
 
 	private static final int API_VERSION = 0;
 	private static final int WRAPPER_VERSION = 1;
@@ -41,10 +42,7 @@ public final class Bootstrap {
 	private static final int MC_DIRECTORY = 3;
 	private static final int MC_ASSETS = 4;
 
-	private Bootstrap() {
-	}
-
-	public static void premain(String args, Instrumentation ins, ClassLoader loader) {
+	public static void premain(String args, Instrumentation instrumentation, ClassLoader loader) {
 
 	}
 
