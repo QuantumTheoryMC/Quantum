@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: api.quantum.Quantum
+Premain-Class: ltp.quantum.Bootstrap
 Name: Quantum API

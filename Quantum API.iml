@@ -8,7 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="Mixin" level="project" />
     <orderEntry type="library" name="Minecraft" level="application" />
     <orderEntry type="module-library">
       <library>
@@ -19,5 +18,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Mixin" level="project" />
   </component>
 </module>
