@@ -1,51 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="Rebase">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/Bootstrap.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/Quantum.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/Quantum.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/block/AbstractBlock.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/block/AbstractBlock.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/block/Block.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/block/Block.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/block/BlockProperty.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/block/BlockProperty.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/block/BlockType.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/block/BlockType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/block/BlockWrapper.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/block/BlockWrapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/entity/Entity.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/entity/Entity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/error/BlockInitException.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/error/BlockInitException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/error/Problem.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/error/Problem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/error/QuantumError.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/error/QuantumError.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/error/QuantumException.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/error/QuantumException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/error/QuantumThrowable.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/error/QuantumThrowable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/error/UnexpectedError.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/error/UnexpectedError.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/log/Logger.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/log/Logger.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/meta/WIP.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/meta/WIP.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/resource/Loader.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/resource/Loader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/resource/Resource.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/resource/Resource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/sound/Sound.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/sound/Sound.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/sound/SoundGroup.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/sound/SoundGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/task/TaskHandler.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/task/TaskHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/util/Axis.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/util/Axis.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/util/CollisionTracer.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/util/CollisionTracer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/util/HitResult.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/util/HitResult.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/util/Plane.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/util/Plane.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/util/Property.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/util/Property.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/util/RenderGroup.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/util/RenderGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/util/java/Serial.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/util/java/Serial.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/util/java/Synchronizer.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/util/java/Synchronizer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/util/java/Value.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/util/java/Value.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/world/World.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/world/World.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/world/WorldAccessor.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/world/WorldAccessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/lib/quantum/world/WorldWrapper.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/world/WorldWrapper.java" />
+    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/out/production/Quantum API/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/out/production/Quantum API/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/out/production/Quantum API/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quantum API.iml" afterPath="$PROJECT_DIR$/Quantum API.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/out/production/Quantum API/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Quantum API/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/production/Quantum API/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/Quantum API.iml" afterPath="$PROJECT_DIR$/out/production/Quantum API/Quantum API.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/production/Quantum API/src/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java" />
     </list>
     <ignored path="Quantum API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,7 +38,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-              <folding />
+              <folding>
+                <element signature="e#1714#1715#0" expanded="true" />
+                <element signature="e#1740#1741#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,9 +49,11 @@
       <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58151263">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.4857143">
+              <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,6 +61,11 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="LinkTheProgrammer &lt;linktheprogrammer@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -374,7 +350,13 @@
       <option name="number" value="Default" />
       <updated>1461378423719</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Rename package to ltp.quantum">
+      <created>1462718516436</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1462718516436</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -384,6 +366,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2688822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31672025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5916399" sideWeight="0.5121212" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5916399" sideWeight="0.4878788" order="7" side_tool="false" content_ui="tabs" />
@@ -393,7 +376,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31672025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -420,7 +402,8 @@
     <MESSAGE value="updated workspace.xml" />
     <MESSAGE value="fixed compile errors due to removing @Untested annotation" />
     <MESSAGE value="Rebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebase" />
+    <MESSAGE value="Rename package to ltp.quantum" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename package to ltp.quantum" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -437,7 +420,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -445,7 +430,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -453,7 +441,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -461,7 +451,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -469,7 +462,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -484,7 +479,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -492,7 +490,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -788,15 +788,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58151263">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.4857143">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

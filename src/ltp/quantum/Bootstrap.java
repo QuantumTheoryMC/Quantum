@@ -28,6 +28,8 @@ package ltp.quantum;/*
 
 import org.spongepowered.asm.launch.MixinBootstrap;
 
+import java.lang.instrument.Instrumentation;
+
 /**
  * @author link
  */
@@ -40,6 +42,10 @@ public final class Bootstrap {
 	private static final int MC_ASSETS = 4;
 
 	private Bootstrap() {
+	}
+
+	public static void premain(String args, Instrumentation ins, ClassLoader loader) {
+
 	}
 
 	static void run(String... args) {
