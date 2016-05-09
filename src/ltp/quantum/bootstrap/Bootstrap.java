@@ -1,4 +1,4 @@
-/*
+package ltp.quantum.bootstrap;/*
  * The MIT License
  *
  * Copyright 2016 link.
@@ -21,50 +21,29 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 3/21/16 at 1:29 PM.
+ * Created file on 3/21/16 at 1:31 PM.
  *
  * This file is part of Quantum API
  */
-package ltp.quantum;
 
-import ltp.quantum.bootstrap.Bootstrap;
+import org.spongepowered.asm.launch.MixinBootstrap;
+
+import java.lang.instrument.Instrumentation;
 
 /**
  * @author link
  */
-@SuppressWarnings("UtilityClassCanBeEnum")
-public final class Quantum {
+public enum Bootstrap {
+	;
 
-	private static final String API_VERSION = "0.1a";
-	private static final String WRAPPER_VERSION = "pre-alpha";
-	private static final String MC_VERSION = "1.8";
-	private static final String MC_DIRECTORY = "~/.minecraft";
-	private static final String MC_ASSETS = MC_DIRECTORY + "/assets";
+	public static void premain(String args, Instrumentation instrumentation, ClassLoader loader) {
 
-	private Quantum() {
 	}
 
-	public static void main(String... args) {
-		Bootstrap.run(args);
+	public static void run(String... args) {
+		//Load Mixin
+		MixinBootstrap.init();
 	}
 
-	public static String getAPIVersion() {
-		return API_VERSION;
-	}
 
-	public static String getWrapperVersion() {
-		return WRAPPER_VERSION;
-	}
-
-	public static String getMinecraftVersion() {
-		return MC_VERSION;
-	}
-
-	public static String getMinecraftDir() {
-		return MC_DIRECTORY;
-	}
-
-	public static String getMinecraftAssetsDir() {
-		return MC_ASSETS;
-	}
 }

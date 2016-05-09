@@ -1,4 +1,4 @@
-package ltp.quantum;/*
+/*
  * The MIT License
  *
  * Copyright 2016 link.
@@ -21,41 +21,14 @@ package ltp.quantum;/*
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 3/21/16 at 1:31 PM.
+ * Created file on 5/8/16 at 10:57 AM.
  *
  * This file is part of Quantum API
  */
-
-import org.spongepowered.asm.launch.MixinBootstrap;
-
-import java.lang.instrument.Instrumentation;
+package ltp.quantum.bootstrap;
 
 /**
  * @author link
  */
-public enum Bootstrap {
-	;
-
-	private static final int API_VERSION = 0;
-	private static final int WRAPPER_VERSION = 1;
-	private static final int MC_VERSION = 2;
-	private static final int MC_DIRECTORY = 3;
-	private static final int MC_ASSETS = 4;
-
-	public static void premain(String args, Instrumentation instrumentation, ClassLoader loader) {
-
-	}
-
-	static void run(String... args) {
-		Quantum.API_VERSION = "API_VERSION";
-		Quantum.WRAPPER_VERSION = "WRAPPER_VERSION";
-		Quantum.MC_VERSION = "MC_VERSION";
-		Quantum.MC_DIRECTORY = "MC_DIRECTORY";
-		Quantum.MC_ASSETS = "MC_ASSETS";
-
-		//Load Mixin
-		MixinBootstrap.init();
-	}
-
-
+public class BootstrapAgent {
 }
