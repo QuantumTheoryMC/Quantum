@@ -20,15 +20,20 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- *
- * Created file on 12/24/15 at 11:38 AM.
- *
- * This file is part of Quantum API
  */
-package ltp.quantum.entity;
+package ltp.quantum.api.world;
+
+import ltp.quantum.meta.WIP;
 
 /**
  * @author link
  */
-public interface Entity {
+@WIP(description = "stub",
+     unfinished = {"Everything"})
+public class World {
+
+	private static World currentWorld;
+
+	private World world;
+
 }

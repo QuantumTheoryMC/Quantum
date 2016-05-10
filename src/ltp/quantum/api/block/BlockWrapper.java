@@ -21,12 +21,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package ltp.quantum.block;
+package ltp.quantum.api.block;
 
-import ltp.quantum.block.AbstractBlock.BlockInfo;
-import ltp.quantum.block.AbstractBlock.BlockInfo.BlockConstraints;
-import ltp.quantum.block.AbstractBlock.BlockInfo.BlockLighting;
-import ltp.quantum.block.AbstractBlock.BlockInfo.ToolInfo;
+import ltp.quantum.api.block.AbstractBlock.BlockInfo;
+import ltp.quantum.api.block.AbstractBlock.BlockInfo.BlockConstraints;
+import ltp.quantum.api.block.AbstractBlock.BlockInfo.BlockLighting;
+import ltp.quantum.api.block.AbstractBlock.BlockInfo.ToolInfo;
 import ltp.quantum.meta.WIP;
 
 import java.util.Random;

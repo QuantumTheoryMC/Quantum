@@ -21,18 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package ltp.quantum.world;
+package ltp.quantum.api.world;
 
-import ltp.quantum.block.Block;
-import net.minecraft.block.state.BlockState;
+import ltp.quantum.meta.WIP;
 
 /**
  * @author link
  */
-public interface WorldAccessor {
+@WIP
+class WorldWrapper {
 
-	void setBlock(Block block, int x, int y, int z);
+	private final net.minecraft.world.World wrappedWorld;
 
-	void setBlockState(BlockState blockState, int x, int y, int z);
+	WorldWrapper(net.minecraft.world.World world) {
+		wrappedWorld = world;
+	}
+
+	//WorldWrapper(WorldInfo info)
+
+	net.minecraft.world.World getWrappedWorld() {
+		return wrappedWorld;
+	}
+
 
 }

@@ -25,7 +25,7 @@
  *
  * This file is part of Quantum API
  */
-package ltp.quantum.block;
+package ltp.quantum.api.block;
 
 import ltp.quantum.meta.WIP;
 

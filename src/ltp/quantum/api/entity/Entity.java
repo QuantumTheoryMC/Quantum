@@ -21,35 +21,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 12/24/15 at 3:43 PM.
+ * Created file on 12/24/15 at 11:38 AM.
  *
  * This file is part of Quantum API
  */
-package ltp.quantum.block;
-
-import ltp.quantum.util.Property;
+package ltp.quantum.api.entity;
 
 /**
  * @author link
  */
-public final class BlockProperty implements Property<String, Object> {
-
-	private final String name;
-	private final Object value;
-
-	public BlockProperty(String name, Object value) {
-		this.name = name;
-		this.value = value;
-	}
-
-	@Override
-	public String getName() {
-		return name;
-	}
-
-	@Override
-	public Object getValue() {
-		return value;
-	}
-
+public interface Entity {
 }

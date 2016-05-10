@@ -21,19 +21,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package ltp.quantum.world;
+package ltp.quantum.api.world;
 
-import ltp.quantum.meta.WIP;
+import ltp.quantum.api.block.Block;
+import net.minecraft.block.state.BlockState;
 
 /**
  * @author link
  */
-@WIP(description = "stub",
-     unfinished = {"Everything"})
-public class World {
+public interface WorldAccessor {
 
-	private static World currentWorld;
+	void setBlock(Block block, int x, int y, int z);
 
-	private World world;
+	void setBlockState(BlockState blockState, int x, int y, int z);
 
 }

@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package ltp.quantum.block;
+package ltp.quantum.api.block;
 
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;

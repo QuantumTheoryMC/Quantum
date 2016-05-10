@@ -20,28 +20,36 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * Created file on 12/24/15 at 3:43 PM.
+ *
+ * This file is part of Quantum API
  */
-package ltp.quantum.world;
+package ltp.quantum.api.block;
 
-import ltp.quantum.meta.WIP;
+import ltp.quantum.util.Property;
 
 /**
  * @author link
  */
-@WIP
-class WorldWrapper {
+public final class BlockProperty implements Property<String, Object> {
 
-	private final net.minecraft.world.World wrappedWorld;
+	private final String name;
+	private final Object value;
 
-	WorldWrapper(net.minecraft.world.World world) {
-		wrappedWorld = world;
+	public BlockProperty(String name, Object value) {
+		this.name = name;
+		this.value = value;
 	}
 
-	//WorldWrapper(WorldInfo info)
-
-	net.minecraft.world.World getWrappedWorld() {
-		return wrappedWorld;
+	@Override
+	public String getName() {
+		return name;
 	}
 
+	@Override
+	public Object getValue() {
+		return value;
+	}
 
 }
