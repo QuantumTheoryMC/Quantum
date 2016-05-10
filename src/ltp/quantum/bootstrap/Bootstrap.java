@@ -36,8 +36,8 @@ import java.lang.instrument.Instrumentation;
 public enum Bootstrap {
 	;
 
-	public static void premain(String args, Instrumentation instrumentation, ClassLoader loader) {
-
+	public static void premain(String args, Instrumentation instrumentation, ClassLoader loader) throws ClassNotFoundException {
+		loader.loadClass("net.minecraft.client.Minecraft");
 	}
 
 	public static void run(String... args) {
