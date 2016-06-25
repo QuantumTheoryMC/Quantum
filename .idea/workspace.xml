@@ -1,50 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="Create the initial mod loading functionality&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/mod/Mod.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ltp/quantum/mod/Mod.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/Quantum.java" afterPath="$PROJECT_DIR$/src/quantum/Quantum.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/api/block/AbstractBlock.java" afterPath="$PROJECT_DIR$/src/quantum/api/block/AbstractBlock.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/api/block/Block.java" afterPath="$PROJECT_DIR$/src/quantum/api/block/Block.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/api/block/BlockProperty.java" afterPath="$PROJECT_DIR$/src/quantum/api/block/BlockProperty.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/api/block/BlockType.java" afterPath="$PROJECT_DIR$/src/quantum/api/block/BlockType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/api/block/BlockWrapper.java" afterPath="$PROJECT_DIR$/src/quantum/api/block/BlockWrapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/api/entity/Entity.java" afterPath="$PROJECT_DIR$/src/quantum/api/entity/Entity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/api/world/World.java" afterPath="$PROJECT_DIR$/src/quantum/api/world/World.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/api/world/WorldAccessor.java" afterPath="$PROJECT_DIR$/src/quantum/api/world/WorldAccessor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/api/world/WorldWrapper.java" afterPath="$PROJECT_DIR$/src/quantum/api/world/WorldWrapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/BootstrapAgent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ClassModifier.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/ClassModifier.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/error/BlockInitException.java" afterPath="$PROJECT_DIR$/src/quantum/error/BlockInitException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/error/Problem.java" afterPath="$PROJECT_DIR$/src/quantum/error/Problem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/error/QuantumError.java" afterPath="$PROJECT_DIR$/src/quantum/error/QuantumError.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/error/QuantumException.java" afterPath="$PROJECT_DIR$/src/quantum/error/QuantumException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/error/QuantumThrowable.java" afterPath="$PROJECT_DIR$/src/quantum/error/QuantumThrowable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/error/UnexpectedError.java" afterPath="$PROJECT_DIR$/src/quantum/error/UnexpectedError.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/log/Logger.java" afterPath="$PROJECT_DIR$/src/quantum/log/Logger.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/meta/WIP.java" afterPath="$PROJECT_DIR$/src/quantum/meta/WIP.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/resource/Loader.java" afterPath="$PROJECT_DIR$/src/quantum/resource/Loader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/resource/Resource.java" afterPath="$PROJECT_DIR$/src/quantum/resource/Resource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/sound/Sound.java" afterPath="$PROJECT_DIR$/src/quantum/sound/Sound.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/sound/SoundGroup.java" afterPath="$PROJECT_DIR$/src/quantum/sound/SoundGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/task/TaskHandler.java" afterPath="$PROJECT_DIR$/src/quantum/task/TaskHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/util/Axis.java" afterPath="$PROJECT_DIR$/src/quantum/util/Axis.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/util/CollisionTracer.java" afterPath="$PROJECT_DIR$/src/quantum/util/CollisionTracer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/util/HitResult.java" afterPath="$PROJECT_DIR$/src/quantum/util/HitResult.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/util/Plane.java" afterPath="$PROJECT_DIR$/src/quantum/util/Plane.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/util/Property.java" afterPath="$PROJECT_DIR$/src/quantum/util/Property.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/util/RenderGroup.java" afterPath="$PROJECT_DIR$/src/quantum/util/RenderGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/util/java/Serial.java" afterPath="$PROJECT_DIR$/src/quantum/util/java/Serial.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/util/java/Synchronizer.java" afterPath="$PROJECT_DIR$/src/quantum/util/java/Synchronizer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ltp/quantum/util/java/Value.java" afterPath="$PROJECT_DIR$/src/quantum/util/java/Value.java" />
+    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Quantum API/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/production/Quantum API/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/production/Quantum API/src/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="Quantum API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,11 +37,9 @@
       <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="476">
               <caret line="54" column="62" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
-              <folding>
-                <marker date="1466885115631" expanded="true" signature="1580:1778" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,37 +54,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModLoader.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ModLoader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+            <state relative-caret-position="235">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1466885557751" expanded="false" signature="587:1186" ph="{...}" />
-                <marker date="1466885557751" expanded="false" signature="611:1165" ph="{...}" />
-                <marker date="1466885557751" expanded="true" signature="766:1137" ph="..." />
+                <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
+                <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
+                <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mod.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/quantum/mod/Mod.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MANIFEST.MF" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -190,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/ltp/quantum/mod/Mod.java" />
         <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/quantum/Quantum.java" />
-        <option value="$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java" />
         <option value="$PROJECT_DIR$/src/quantum/mod/Mod.java" />
+        <option value="$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java" />
       </list>
     </option>
   </component>
@@ -326,50 +262,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="quantum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quantum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mod" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quantum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -798,7 +690,21 @@
       <option name="project" value="LOCAL" />
       <updated>1466883555771</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Create the initial mod loading functionality&#10;">
+      <created>1466885970511</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1466885970511</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Create the initial mod loading functionality&#10;">
+      <created>1466886212359</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1466886212359</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -807,14 +713,14 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31260794" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31260794" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5916399" sideWeight="0.5121212" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.59067357" sideWeight="0.4878788" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59067357" sideWeight="0.4878788" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26022306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26022306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30438066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -854,7 +760,8 @@
     <MESSAGE value="Prepare agent creation" />
     <MESSAGE value="Create the initial mod loading functionality" />
     <MESSAGE value="Rename base package ltp.quantum to quantum" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename base package ltp.quantum to quantum" />
+    <MESSAGE value="Create the initial mod loading functionality&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create the initial mod loading functionality&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -879,9 +786,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="54" column="62" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
-          <folding>
-            <marker date="1466885115631" expanded="true" signature="1580:1778" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -899,9 +804,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1466885557751" expanded="false" signature="587:1186" ph="{...}" />
-            <marker date="1466885557751" expanded="false" signature="611:1165" ph="{...}" />
-            <marker date="1466885557751" expanded="true" signature="766:1137" ph="..." />
+            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
+            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
+            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
           </folding>
         </state>
       </provider>
@@ -934,9 +839,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding>
-            <marker date="1466885115631" expanded="true" signature="1580:1778" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -946,9 +849,9 @@
           <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1466885557751" expanded="false" signature="587:1186" ph="{...}" />
-            <marker date="1466885557751" expanded="false" signature="611:1165" ph="{...}" />
-            <marker date="1466885557751" expanded="true" signature="766:1137" ph="..." />
+            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
+            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
+            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
           </folding>
         </state>
       </provider>
@@ -973,9 +876,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding>
-            <marker date="1466885115631" expanded="true" signature="1580:1778" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -985,9 +886,9 @@
           <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1466885557751" expanded="false" signature="587:1186" ph="{...}" />
-            <marker date="1466885557751" expanded="false" signature="611:1165" ph="{...}" />
-            <marker date="1466885557751" expanded="true" signature="766:1137" ph="..." />
+            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
+            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
+            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1012,9 +913,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding>
-            <marker date="1466885115631" expanded="true" signature="1580:1778" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,9 +923,9 @@
           <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1466885557751" expanded="false" signature="587:1186" ph="{...}" />
-            <marker date="1466885557751" expanded="false" signature="611:1165" ph="{...}" />
-            <marker date="1466885557751" expanded="true" signature="766:1137" ph="..." />
+            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
+            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
+            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1051,9 +950,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1466885115631" expanded="true" signature="1580:1778" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,9 +960,9 @@
           <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1466885557751" expanded="false" signature="587:1186" ph="{...}" />
-            <marker date="1466885557751" expanded="false" signature="611:1165" ph="{...}" />
-            <marker date="1466885557751" expanded="true" signature="766:1137" ph="..." />
+            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
+            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
+            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1090,9 +987,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-          <folding>
-            <marker date="1466885115631" expanded="true" signature="1580:1778" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,9 +997,9 @@
           <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1466885557751" expanded="false" signature="587:1186" ph="{...}" />
-            <marker date="1466885557751" expanded="false" signature="611:1165" ph="{...}" />
-            <marker date="1466885557751" expanded="true" signature="766:1137" ph="..." />
+            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
+            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
+            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1120,11 +1015,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="476">
           <caret line="54" column="62" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
-          <folding>
-            <marker date="1466885115631" expanded="true" signature="1580:1778" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1152,24 +1045,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/mod/Mod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1466885557751" expanded="false" signature="587:1186" ph="{...}" />
-            <marker date="1466885557751" expanded="false" signature="611:1165" ph="{...}" />
-            <marker date="1466885557751" expanded="true" signature="766:1137" ph="..." />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/mod/Mod.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-          <folding />
+        <state relative-caret-position="235">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
+            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
+            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
