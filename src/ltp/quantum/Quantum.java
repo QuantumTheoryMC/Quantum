@@ -27,7 +27,8 @@
  */
 package ltp.quantum;
 
-import ltp.quantum.bootstrap.Bootstrap;
+import java.io.File;
+import java.util.Map;
 
 /**
  * @author link
@@ -35,6 +36,7 @@ import ltp.quantum.bootstrap.Bootstrap;
 @SuppressWarnings("UtilityClassCanBeEnum")
 public final class Quantum {
 
+	//hard-coded for now
 	private static final String API_VERSION = "0.1a";
 	private static final String WRAPPER_VERSION = "pre-alpha";
 	private static final String MC_VERSION = "1.8";
@@ -45,7 +47,6 @@ public final class Quantum {
 	}
 
 	public static void main(String... args) {
-		Bootstrap.run(args);
 	}
 
 	public static String getAPIVersion() {
@@ -66,5 +67,12 @@ public final class Quantum {
 
 	public static String getMinecraftAssetsDir() {
 		return MC_ASSETS;
+	}
+
+	// TODO Might be removed
+	public static File getMinecraftAsset(long hash) {
+		// TODO
+		Map<Long, File> map = null;
+		return map.get(hash);
 	}
 }

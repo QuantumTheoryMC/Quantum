@@ -21,54 +21,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 6/20/16 at 5:16 PM.
+ * Created file on 6/20/16 at 5:47 PM.
  *
  * This file is part of Quantum API
  */
 package ltp.quantum.bootstrap;
 
-import javassist.CannotCompileException;
-import javassist.ClassPool;
 import javassist.CtClass;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.instrument.IllegalClassFormatException;
-import java.security.ProtectionDomain;
-import java.util.Map;
-import java.util.stream.Stream;
-
 /**
+ * Modifies a single given class.
+ *
  * @author link
  */
-class BootstrapAgent implements java.lang.instrument.ClassFileTransformer {
+@FunctionalInterface
+public interface ClassModifier {
 
-	private final Map<String, ClassModifier> modifiers;
+	void modify(String className, CtClass modify);
 
-	BootstrapAgent(Map<String, ClassModifier> modifiers) {
-		this.modifiers = modifiers;
-	}
-
-	@Override
-	public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined,
-	                        ProtectionDomain protection, byte[] classFile) throws IllegalClassFormatException {
-		if (classFile == null || className == null)
-			return null;
-
-		ClassModifier modifier = modifiers.get(className);
-
-		if (modifier == null)
-			return null;
-
-		try {
-			ClassPool cp = ClassPool.getDefault();
-			CtClass ct = cp.makeClass((InputStream) Stream.of(classFile));
-			modifier.modify(className, ct);
-			return ct.toBytecode();
-		} catch (IOException | CannotCompileException e) {
-			//ignore
-			return null;
-		}
-
-	}
 }

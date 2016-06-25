@@ -1,4 +1,4 @@
-package ltp.quantum.bootstrap;/*
+/*
  * The MIT License
  *
  * Copyright 2016 link.
@@ -25,10 +25,13 @@ package ltp.quantum.bootstrap;/*
  *
  * This file is part of Quantum API
  */
+package ltp.quantum.bootstrap;
 
-import org.spongepowered.asm.launch.MixinBootstrap;
-
+import java.io.IOException;
 import java.lang.instrument.Instrumentation;
+import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author link
@@ -36,13 +39,29 @@ import java.lang.instrument.Instrumentation;
 public enum Bootstrap {
 	;
 
-	public static void premain(String args, Instrumentation instrumentation, ClassLoader loader) throws ClassNotFoundException {
-		loader.loadClass("net.minecraft.client.Minecraft");
+	public static void premain(String args, Instrumentation ins) throws ClassNotFoundException {
+		// add mod jar files to ClassLoader search
+		try {
+			System.out.println("Loading mods...");
+			ModLoader.load(ins, Paths.get("~/.minecraft/quantum/mods"));
+			System.out.println("Done");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("Modifying classes...");
+		Map<String, ClassModifier> classMods = new HashMap<>();
+		classMods.put("net.minecraft.client.main.Main", (className, modify) -> System.out.println("Successfully tested 'modifying' class: " + className));
+		ins.addTransformer(new BootstrapAgent(classMods));
+		System.out.println("Done");
+	}
+
+	public static void agentmain(String args, Instrumentation ins) throws ClassNotFoundException {
+		premain(args, ins);
 	}
 
 	public static void run(String... args) {
-		//Load Mixin
-		MixinBootstrap.init();
+
 	}
 
 

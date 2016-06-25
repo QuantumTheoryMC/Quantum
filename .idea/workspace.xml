@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="">
+    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="Create the initial mod loading functionality">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ClassModifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ltp/quantum/mod/Mod.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Mixin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/ModLoader$LoadResult.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/ModLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/QuantumAPI.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/UniversalAgent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/AbstractBlock$BlockInfo$BlockConstraints.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/AbstractBlock$BlockInfo$BlockLighting.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/AbstractBlock$BlockInfo$ToolInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/AbstractBlock$BlockInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/AbstractBlock$SoundType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/AbstractBlock.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/Block.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/BlockProperty.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/BlockType$BlockColor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/BlockType$MaterialWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/BlockType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/BlockWrapper$BlockImpl$BlockAccessor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/BlockWrapper$BlockImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/block/BlockWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/entity/Entity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/error/BlockInitException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/error/Problem$Status.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/error/Problem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/error/QuantumError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/error/QuantumException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/error/QuantumThrowable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/error/UnexpectedError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/hook/Hook.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/hook/Parameter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/hook/Parameters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/hook/Return.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/log/Logger$Entry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/log/Logger$Severity$Context.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/log/Logger$Severity$Level.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/log/Logger$Severity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/log/Logger.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/meta/Untested.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/meta/WIP.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/mod/Mod.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/mod/Modification.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/mod/QuantumMod$Type.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/mod/QuantumMod.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/resource/Loader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/resource/Resource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/sound/Sound.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/sound/SoundGroup.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/task/TaskHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/util/Axis.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/util/CollisionTracer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/util/HitResult$HitResultType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/util/HitResult.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/util/Plane.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/util/Property.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/util/RenderGroup.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/util/java/Serial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/util/java/Synchronizer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/util/java/Value.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/world/World.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/world/WorldAccessor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/api/quantum/world/WorldWrapper.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quantum API.iml" afterPath="$PROJECT_DIR$/Quantum API.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/out/production/Quantum API/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Quantum API/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/Quantum API.iml" afterPath="$PROJECT_DIR$/out/production/Quantum API/Quantum API.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ltp/quantum/Quantum.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/Quantum.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java" afterPath="$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java" />
     </list>
     <ignored path="Quantum API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,12 +100,33 @@
       <file leaf-file-name="Quantum.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Quantum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+            <state relative-caret-position="153">
+              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
               <folding>
-                <element signature="e#1296#1338#0" expanded="true" />
-                <element signature="e#1723#1724#0" expanded="true" />
-                <element signature="e#1749#1750#0" expanded="true" />
+                <element signature="e#0#2252#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1792#1793#0" expanded="false" />
+                <element signature="e#1817#1818#0" expanded="false" />
+                <element signature="e#1862#1863#0" expanded="false" />
+                <element signature="e#1891#1892#0" expanded="false" />
+                <element signature="e#1938#1939#0" expanded="false" />
+                <element signature="e#1962#1963#0" expanded="false" />
+                <element signature="e#2005#2006#0" expanded="false" />
+                <element signature="e#2031#2032#0" expanded="false" />
+                <element signature="e#2080#2081#0" expanded="false" />
+                <element signature="e#2103#2104#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+              <folding>
+                <marker date="1466883238561" expanded="true" signature="1584:1782" ph="..." />
               </folding>
             </state>
           </provider>
@@ -42,21 +135,33 @@
       <file leaf-file-name="BootstrapAgent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+            <state relative-caret-position="303">
+              <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java">
+      <file leaf-file-name="ModLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51428574">
-              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+            <state relative-caret-position="255">
+              <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1466883062208" expanded="false" signature="620:1219" ph="{...}" />
+                <marker date="1466883062208" expanded="false" signature="644:1198" ph="{...}" />
+                <marker date="1466883062208" expanded="true" signature="799:1170" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mod.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ltp/quantum/mod/Mod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="74" column="64" selection-start-line="74" selection-start-column="64" selection-end-line="74" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,6 +172,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -95,19 +202,101 @@
         <option value="$PROJECT_DIR$/src/ltp/lib/quantum/block/Block.java" />
         <option value="$PROJECT_DIR$/src/ltp/lib/quantum/block/BlockWrapper.java" />
         <option value="$PROJECT_DIR$/src/ltp/lib/quantum/Quantum.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/ltp/lib/quantum/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/Quantum.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/Mod.java" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModInfo.java" />
+        <option value="$PROJECT_DIR$/src/mixin/MixinMinecraftMain.java" />
+        <option value="$PROJECT_DIR$/src/mixin/MixinMinecraft.java" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/mixin/MinecraftAccessor.java" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/mixin/MixinMinecraft.java" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModFileFilter.java" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ClassTransformer.java" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ClassModifier.java" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/Quantum.java" />
+        <option value="/usr/lib/jvm/java-8-jdk/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/util/JVM.java" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java" />
         <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/src/ltp/quantum/mod/Mod.java" />
       </list>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="31" />
+    <option name="y" value="27" />
     <option name="width" value="1366" />
-    <option name="height" value="737" />
+    <option name="height" value="708" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CollectionsScala</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralScala</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Internationalization issuesJava</id>
+          </State>
+          <State>
+            <id>JUnit issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Naming ConventionsGroovy</id>
+          </State>
+          <State>
+            <id>Naming conventionsJava</id>
+          </State>
+          <State>
+            <id>Other CollectionsScala</id>
+          </State>
+          <State>
+            <id>Performance issuesJava</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>Scala</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Ant inspections</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -134,7 +323,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -163,7 +351,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -177,11 +365,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quantum API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quantum API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quantum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quantum API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quantum API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quantum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -189,15 +417,25 @@
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jGUI" />
+    <property name="last_opened_file_path" value="/usr/lib/jvm/java-8-jdk/lib/dt.jar!/" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.27210885" />
+    <property name="ToolWindowMaven Projects.ShowToolbar" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Minecraft">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -207,6 +445,7 @@
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -237,6 +476,7 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -257,6 +497,7 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -277,10 +518,12 @@
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <envs />
       <method />
     </configuration>
     <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SCRATCH_FILE_ID" value="0" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
@@ -295,6 +538,31 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Quantum API" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -303,39 +571,163 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
       <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
     </configuration>
-    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
     </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Minecraft" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="net.minecraft.client.main.Main" />
+      <option name="VM_PARAMETERS" value="-javaagent:&quot;$PROJECT_DIR$/quantum_api.jar&quot;=&quot;mod_directory=~/.minecraft/quantum/mod&quot; -Djava.library.path=lib/Minecraft/natives/lwjgl" />
+      <option name="PROGRAM_PARAMETERS" value="--version mcp --accessToken 0 --assetsDir $USER_HOME$/.minecraft/assets --assetIndex 1.8 --userProperties {}" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Minecraft" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Quantum API" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.Minecraft" />
+    </list>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="updated workspace.xml">
       <created>1458840307330</created>
       <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1458840307330</updated>
     </task>
     <task id="LOCAL-00002" summary="updated workspace.xml">
       <created>1458840334490</created>
       <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
       <updated>1458840334490</updated>
     </task>
     <task id="LOCAL-00003" summary="updated workspace.xml">
       <created>1458840343986</created>
       <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
       <updated>1458840343986</updated>
     </task>
     <task id="LOCAL-00004" summary="fixed compile errors due to removing @Untested annotation">
       <created>1458841791547</created>
       <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
       <updated>1458841791548</updated>
     </task>
@@ -343,79 +735,94 @@
       <changelist id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="" />
       <created>1461378423719</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1461378423719</updated>
     </task>
     <task id="LOCAL-00005" summary="Rename package to ltp.quantum">
       <created>1462718516436</created>
       <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
       <updated>1462718516436</updated>
     </task>
     <task id="LOCAL-00006" summary="Create premain method in Bootstrap">
       <created>1462718717206</created>
       <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
       <updated>1462718717206</updated>
     </task>
     <task id="LOCAL-00007" summary="Rename method parameter &quot;ins&quot; to &quot;instrumentation&quot; in Bootstrap premain method">
       <created>1462718794176</created>
       <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
       <updated>1462718794176</updated>
     </task>
     <task id="LOCAL-00008" summary="Create packages api and bootstrap&#10;">
       <created>1462718907176</created>
       <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1462718907176</updated>
     </task>
     <task id="LOCAL-00009" summary="Prepare bootstrap implementation">
       <created>1462831105477</created>
       <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
       <updated>1462831105477</updated>
     </task>
     <task id="LOCAL-00010" summary="Move packages block, entity, world to api">
       <created>1462839707981</created>
       <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
       <updated>1462839707981</updated>
     </task>
     <task id="LOCAL-00011" summary="Add a simple .gitignore">
       <created>1462839965121</created>
       <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1462839965121</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Prepare agent creation">
+      <created>1462841280808</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1462841280808</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="31" width="1366" height="737" extended-state="6" />
+    <frame x="0" y="27" width="1366" height="708" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26468402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31511253" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31260794" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5916399" sideWeight="0.5121212" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5916399" sideWeight="0.4878788" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26022306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30438066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32636657" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -440,11 +847,13 @@
     <MESSAGE value="Prepare bootstrap implementation" />
     <MESSAGE value="Move packages block, entity, world to api" />
     <MESSAGE value="Add a simple .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a simple .gitignore" />
+    <MESSAGE value="Prepare agent creation" />
+    <MESSAGE value="Create the initial mod loading functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create the initial mod loading functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -453,389 +862,339 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Quantum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#2252#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1792#1793#0" expanded="false" />
+            <element signature="e#1817#1818#0" expanded="false" />
+            <element signature="e#1862#1863#0" expanded="false" />
+            <element signature="e#1891#1892#0" expanded="false" />
+            <element signature="e#1938#1939#0" expanded="false" />
+            <element signature="e#1962#1963#0" expanded="false" />
+            <element signature="e#2005#2006#0" expanded="false" />
+            <element signature="e#2031#2032#0" expanded="false" />
+            <element signature="e#2080#2081#0" expanded="false" />
+            <element signature="e#2103#2104#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1466883238561" expanded="true" signature="1584:1782" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding>
+            <marker date="1466883062208" expanded="false" signature="620:1219" ph="{...}" />
+            <marker date="1466883062208" expanded="false" signature="644:1198" ph="{...}" />
+            <marker date="1466883062208" expanded="true" signature="799:1170" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Quantum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding>
-            <element signature="e#1296#1338#0" expanded="true" />
-            <element signature="e#1723#1724#0" expanded="true" />
-            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#0#2252#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1792#1793#0" expanded="false" />
+            <element signature="e#1817#1818#0" expanded="false" />
+            <element signature="e#1862#1863#0" expanded="false" />
+            <element signature="e#1891#1892#0" expanded="false" />
+            <element signature="e#1938#1939#0" expanded="false" />
+            <element signature="e#1962#1963#0" expanded="false" />
+            <element signature="e#2005#2006#0" expanded="false" />
+            <element signature="e#2031#2032#0" expanded="false" />
+            <element signature="e#2080#2081#0" expanded="false" />
+            <element signature="e#2103#2104#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+        <state relative-caret-position="204">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1466883238561" expanded="true" signature="1584:1782" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/api/block/AbstractBlock.java">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="234" column="13" selection-start-line="234" selection-start-column="13" selection-end-line="234" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding>
+            <marker date="1466883062208" expanded="false" signature="620:1219" ph="{...}" />
+            <marker date="1466883062208" expanded="false" signature="644:1198" ph="{...}" />
+            <marker date="1466883062208" expanded="true" signature="799:1170" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Quantum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        <state relative-caret-position="153">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding>
-            <element signature="e#1296#1338#0" expanded="true" />
-            <element signature="e#1723#1724#0" expanded="true" />
-            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#0#2252#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1792#1793#0" expanded="false" />
+            <element signature="e#1817#1818#0" expanded="false" />
+            <element signature="e#1862#1863#0" expanded="false" />
+            <element signature="e#1891#1892#0" expanded="false" />
+            <element signature="e#1938#1939#0" expanded="false" />
+            <element signature="e#1962#1963#0" expanded="false" />
+            <element signature="e#2005#2006#0" expanded="false" />
+            <element signature="e#2031#2032#0" expanded="false" />
+            <element signature="e#2080#2081#0" expanded="false" />
+            <element signature="e#2103#2104#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1466883238561" expanded="true" signature="1584:1782" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/api/world/WorldAccessor.java">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17085427">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        <state relative-caret-position="0">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding>
+            <marker date="1466883062208" expanded="false" signature="620:1219" ph="{...}" />
+            <marker date="1466883062208" expanded="false" signature="644:1198" ph="{...}" />
+            <marker date="1466883062208" expanded="true" signature="799:1170" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/util/Map.class">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Quantum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5054054">
-          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+        <state relative-caret-position="153">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#2252#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1792#1793#0" expanded="false" />
+            <element signature="e#1817#1818#0" expanded="false" />
+            <element signature="e#1862#1863#0" expanded="false" />
+            <element signature="e#1891#1892#0" expanded="false" />
+            <element signature="e#1938#1939#0" expanded="false" />
+            <element signature="e#1962#1963#0" expanded="false" />
+            <element signature="e#2005#2006#0" expanded="false" />
+            <element signature="e#2031#2032#0" expanded="false" />
+            <element signature="e#2080#2081#0" expanded="false" />
+            <element signature="e#2103#2104#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/NetBeansProjects/Minecraft Source/src/net/minecraft/block/material/MapColor.java">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77272725">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        <state relative-caret-position="459">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/error/Problem.java">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33838382">
-          <caret line="131" column="43" selection-start-line="131" selection-start-column="43" selection-end-line="131" selection-end-column="43" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1466883238561" expanded="true" signature="1584:1782" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/error/UnexpectedError.java">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5277778">
-          <caret line="40" column="95" selection-start-line="40" selection-start-column="95" selection-end-line="40" selection-end-column="95" />
+        <state relative-caret-position="0">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding>
+            <marker date="1466883062208" expanded="false" signature="620:1219" ph="{...}" />
+            <marker date="1466883062208" expanded="false" signature="644:1198" ph="{...}" />
+            <marker date="1466883062208" expanded="true" signature="799:1170" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/util/jar/JarFile.class">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Quantum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#2252#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1792#1793#0" expanded="false" />
+            <element signature="e#1817#1818#0" expanded="false" />
+            <element signature="e#1862#1863#0" expanded="false" />
+            <element signature="e#1891#1892#0" expanded="false" />
+            <element signature="e#1938#1939#0" expanded="false" />
+            <element signature="e#1962#1963#0" expanded="false" />
+            <element signature="e#2005#2006#0" expanded="false" />
+            <element signature="e#2031#2032#0" expanded="false" />
+            <element signature="e#2080#2081#0" expanded="false" />
+            <element signature="e#2103#2104#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../javassist/src/javassist/ClassPoolTail.java">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="204" column="34" selection-start-line="204" selection-start-column="34" selection-end-line="204" selection-end-column="34" />
+        <state relative-caret-position="459">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/redist/annotations-java8.jar!/org/jetbrains/annotations/Contract.class">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2693662">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="850">
+          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+          <folding>
+            <marker date="1466883238561" expanded="true" signature="1584:1782" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/awt/color/CMMException.class">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11971831">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="391">
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+          <folding>
+            <marker date="1466883062208" expanded="false" signature="620:1219" ph="{...}" />
+            <marker date="1466883062208" expanded="false" signature="644:1198" ph="{...}" />
+            <marker date="1466883062208" expanded="true" signature="799:1170" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/awt/color/ColorSpace.class">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/mod/Mod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4242957">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/lang/AbstractMethodError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11971831">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/jdk1.8.0_65/src.zip!/java/awt/ActiveEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5993266">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../javassist/src/javassist/ClassPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7626263">
-          <caret line="1000" column="21" selection-start-line="1000" selection-start-column="21" selection-end-line="1000" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/api/entity/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17171717">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/util/Property.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/jdk1.8.0_65/src.zip!/java/util/function/BiConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/jdk1.8.0_65/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8484849">
-          <caret line="617" column="17" selection-start-line="617" selection-start-column="17" selection-end-line="617" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/jdk1.8.0_65/src.zip!/java/util/jar/Attributes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0353537">
-          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/com/sun/java/util/jar/pack/ClassReader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34859154">
-          <caret line="610" column="17" selection-start-line="610" selection-start-column="17" selection-end-line="610" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/NetBeansProjects/Minecraft Source/src/net/minecraft/block/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02852349">
-          <caret line="1551" column="19" selection-start-line="1551" selection-start-column="19" selection-end-line="1551" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/NetBeansProjects/Minecraft Source/src/net/minecraft/block/BlockDirt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2852349">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Quantum API.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/api/block/BlockProperty.java">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Quantum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57239056">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        <state relative-caret-position="153">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#2252#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1792#1793#0" expanded="false" />
+            <element signature="e#1817#1818#0" expanded="false" />
+            <element signature="e#1862#1863#0" expanded="false" />
+            <element signature="e#1891#1892#0" expanded="false" />
+            <element signature="e#1938#1939#0" expanded="false" />
+            <element signature="e#1962#1963#0" expanded="false" />
+            <element signature="e#2005#2006#0" expanded="false" />
+            <element signature="e#2031#2032#0" expanded="false" />
+            <element signature="e#2080#2081#0" expanded="false" />
+            <element signature="e#2103#2104#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../javassist/src/javassist/CtClass.java">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/util/JVM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.18181819">
-          <caret line="978" column="20" selection-start-line="978" selection-start-column="20" selection-end-line="978" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/NetBeansProjects/Minecraft Source/src/net/minecraft/client/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042821158">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/jdk1.8.0_65/src.zip!/java/lang/ClassNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/sun/security/util/Debug.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9295774">
-          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/jdk1.8.0_65/src.zip!/java/security/Security.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/api/block/AbstractBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.0285716">
-          <caret line="234" column="13" selection-start-line="234" selection-start-column="13" selection-end-line="234" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/util/java/Serial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17142858">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/util/java/Synchronizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/log/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/util/java/Value.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08571429">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04657534">
-          <caret line="12" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="636" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/util/Plane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22857143">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/resource/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277312">
-          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/error/QuantumThrowable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38991597">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/api/block/BlockType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31428573">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/api/block/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277312">
-          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/api/block/BlockWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0">
-          <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
+        <state relative-caret-position="289">
+          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.057142857">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        <state relative-caret-position="303">
+          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/Quantum.java">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+        <state relative-caret-position="255">
+          <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
           <folding>
-            <element signature="e#1296#1338#0" expanded="true" />
-            <element signature="e#1723#1724#0" expanded="true" />
-            <element signature="e#1749#1750#0" expanded="true" />
+            <marker date="1466883062208" expanded="false" signature="620:1219" ph="{...}" />
+            <marker date="1466883062208" expanded="false" signature="644:1198" ph="{...}" />
+            <marker date="1466883062208" expanded="true" signature="799:1170" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/mod/Mod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.085213035">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        <state relative-caret-position="59">
+          <caret line="74" column="64" selection-start-line="74" selection-start-column="64" selection-end-line="74" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51428574">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="297">
+          <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1466883238561" expanded="true" signature="1584:1782" ph="..." />
           </folding>
         </state>
       </provider>
@@ -855,9 +1214,21 @@
           </splitter-proportions>
         </settings>
       </state>
+      <state key="Copyright.UI">
+        <settings>
+          <last-edited>MIT</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Mixin</last-edited>
+          <last-edited>Minecraft</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -894,6 +1265,18 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>Mixin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>Unnamed</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
