@@ -1,5 +1,7 @@
 package quantum.bootstrap;
 
+import quantum.mod.Mod;
+
 import java.io.File;
 import java.io.IOException;
 import java.lang.instrument.Instrumentation;
@@ -47,7 +49,7 @@ enum ModLoader {
 			}
 	}
 
-	public static void unload(Instrumentation ins, quantum.mod.Mod mod) {
+	public static void unload(Instrumentation ins, Mod mod) {
 		// TODO
 	}
 
