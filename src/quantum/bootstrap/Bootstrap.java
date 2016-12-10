@@ -27,8 +27,19 @@
  */
 package quantum.bootstrap;
 
+import com.sun.tools.attach.AgentInitializationException;
+import com.sun.tools.attach.AgentLoadException;
+import com.sun.tools.attach.AttachNotSupportedException;
+import com.sun.tools.attach.VirtualMachine;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.texture.TextureMap;
+import quantum.Quantum;
+import quantum.wrapper.bootstrap.CMMinecraft;
+import quantum.wrapper.bootstrap.CMTextureMap;
+
 import java.io.IOException;
 import java.lang.instrument.Instrumentation;
+import java.lang.management.ManagementFactory;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
@@ -40,29 +51,42 @@ public enum Bootstrap {
 	;
 
 	public static void premain(String args, Instrumentation ins) throws ClassNotFoundException {
-		// add mod jar files to ClassLoader search
-		try {
-			System.out.println("Loading mods...");
-			ModLoader.load(ins, Paths.get("~/.minecraft/quantum/mods"));
-			System.out.println("Done");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		System.out.println("[Bootstrap] Quantum API Java Agent initialized...");
+		System.out.println("[Bootstrap] Modifying classes...");
+		Map<String, ClassModifier> modifiers = new HashMap<>(2);
 
-		System.out.println("Modifying classes...");
-		Map<String, ClassModifier> classMods = new HashMap<>();
-		classMods.put("net.minecraft.client.main.Main", (className, modify) -> System.out.println("Successfully tested 'modifying' class: " + className));
-		ins.addTransformer(new BootstrapAgent(classMods), true);
-		System.out.println("Done");
+		modifiers.put(Minecraft.class.getName(), new CMMinecraft());
+		modifiers.put(TextureMap.class.getName(), new CMTextureMap());
+		//for Quantum Devel
+		//modifiers.put("beq", new CMMinecraft());
+		//modifiers.put("byv", new CMTextureMap());
+
+		BootstrapTransformer transformer = new BootstrapTransformer(modifiers);
+
+		ins.addTransformer(transformer, true);
+		System.out.println("[Bootstrap] Done");
+		// add mod jar files to ClassLoader search
+		System.out.println("[Bootstrap] Initializing Quantum...");
+		Quantum.main();
+		System.out.println("[Bootstrap] Successfully initialized Quantum");
+
+
 	}
 
 	public static void agentmain(String args, Instrumentation ins) throws ClassNotFoundException {
 		premain(args, ins);
 	}
 
-	public static void run(String... args) {
-
+	//might be used later on
+	public static void loadAgent() throws IOException, AttachNotSupportedException, AgentLoadException, AgentInitializationException {
+		VirtualMachine vm;
+		String pid = ManagementFactory.getRuntimeMXBean()
+		                              .getName()
+		                              .split("@")[0];
+		vm = VirtualMachine.attach(pid);
+		vm.loadAgent(Paths.get(Quantum.getMinecraftDir() + "/quantum/quantum_agent.jar")
+		                  .toString(), "");
+		vm.detach();
 	}
-
 
 }

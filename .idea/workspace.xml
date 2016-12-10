@@ -1,12 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="quantum_api:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="">
+    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="Prepare for 1.0b release">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/QUnit_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/quantum_api_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/QUnit/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/model/CustomModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/MinecraftObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/block/Air.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/block/BlockBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/block/model/BlockModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/dimension/Dimension.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/entity/player/PlayerEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/item/Item.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/resource/AbstractResource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/resource/AbstractResourcePack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/resource/DefaultResourcePack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/resource/Resource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/resource/ResourcePack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/resource/TextureResource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/resource/loader/ResourceLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/resource/loader/TextureLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/sound/Sound.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/world/chunk/Chunk.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/BootstrapTransformer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/event/Event.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/event/EventHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/event/Listener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/logger/AbstractLogger.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/logger/Logger.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/logger/ModLogger.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/logger/QuantumLogger.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/logger/log/Log.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/math/Vector3d.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/mod/minecraft/ModMinecraft.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/model/texture/AbstractTexture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/model/texture/Image.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/model/texture/Texture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/runtime/Tickable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/util/result/ArrayResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/util/result/ByteResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/util/result/CharResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/util/result/DoubleResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/util/result/FloatResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/util/result/IntResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/util/result/LongResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/util/result/ShortResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/util/time/Time.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMMinecraft.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMTextureMap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/entity/EntityAccessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/entity/EntityAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/Sprites.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/block/StateAccessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/block/StateAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/model/BlockEntityModelAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/QuantumExtendedResourcePack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/QuantumResourceManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/sprite/QSprite.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/world/chunk/ChunkAccessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/world/chunk/ChunkAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/world/BlockEntityAccessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/world/WorldAccessor.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/QuantumAPI.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.gradle/2.10/taskArtifacts/cache.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/codeStyleSettings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/dictionaries/link.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/libraries/javassist.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/Quantum API.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Quantum API/src/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/api/block/BlockType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/api/block/BlockWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/error/Problem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/error/QuantumThrowable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/error/UnexpectedError.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/log/Logger.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/resource/Loader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/resource/Resource.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/sound/SoundGroup.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/util/HitResult.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/util/Plane.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/quantum/util/java/Serial.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/api/world/WorldAccessor.java" afterPath="$PROJECT_DIR$/src/quantum/api/world/BlockEntity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/api/world/WorldWrapper.java" afterPath="$PROJECT_DIR$/src/quantum/math/Vector3f.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/bootstrap/BootstrapAgent.java" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/world/WorldAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/error/BlockInitException.java" afterPath="$PROJECT_DIR$/src/quantum/util/result/Result.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/error/QuantumError.java" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/block/BlockAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/error/QuantumException.java" afterPath="$PROJECT_DIR$/src/quantum/Blocks.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/meta/WIP.java" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/model/QModelManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/sound/Sound.java" afterPath="$PROJECT_DIR$/src/quantum/util/Handle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/task/TaskHandler.java" afterPath="$PROJECT_DIR$/src/quantum/model/Cube.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/util/Axis.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/ModManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/util/CollisionTracer.java" afterPath="$PROJECT_DIR$/src/quantum/util/Direction.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/util/RenderGroup.java" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/tileentity/TileEntityAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/util/java/Synchronizer.java" afterPath="$PROJECT_DIR$/src/quantum/model/Model.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/util/java/Value.java" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/block/TypeAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/link.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/link.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quantum API.iml" afterPath="$PROJECT_DIR$/Quantum API.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/Quantum.java" afterPath="$PROJECT_DIR$/src/quantum/Quantum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/api/block/AbstractBlock.java" afterPath="$PROJECT_DIR$/src/quantum/api/block/AbstractBlock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/api/block/Block.java" afterPath="$PROJECT_DIR$/src/quantum/api/block/Block.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/api/block/BlockProperty.java" afterPath="$PROJECT_DIR$/src/quantum/api/block/BlockProperty.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/api/entity/Entity.java" afterPath="$PROJECT_DIR$/src/quantum/api/entity/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/api/world/World.java" afterPath="$PROJECT_DIR$/src/quantum/api/world/World.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/mod/Mod.java" afterPath="$PROJECT_DIR$/src/quantum/mod/Mod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/util/Property.java" afterPath="$PROJECT_DIR$/src/quantum/util/Property.java" />
     </list>
     <ignored path="Quantum API.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="QUnit/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +150,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -24,47 +159,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Quantum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
+      <file leaf-file-name="ModQUnit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+            <state relative-caret-position="119">
+              <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bootstrap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
+      <file leaf-file-name="BlockBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/quantum/api/block/BlockBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="54" column="62" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BootstrapAgent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/BootstrapAgent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModLoader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="-783">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
-                <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
-                <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
+                <element signature="method#id#0;class#BlockBuilder#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractBlock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/quantum/api/block/AbstractBlock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockEntity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/quantum/api/world/BlockEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,9 +206,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,37 +229,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/ltp/lib/quantum/util/Plane.java" />
-        <option value="$PROJECT_DIR$/src/ltp/lib/quantum/resource/Resource.java" />
-        <option value="$PROJECT_DIR$/src/ltp/lib/quantum/error/QuantumThrowable.java" />
-        <option value="$PROJECT_DIR$/src/ltp/lib/quantum/block/BlockType.java" />
-        <option value="$PROJECT_DIR$/src/ltp/lib/quantum/block/Block.java" />
-        <option value="$PROJECT_DIR$/src/ltp/lib/quantum/block/BlockWrapper.java" />
-        <option value="$PROJECT_DIR$/src/ltp/lib/quantum/Quantum.java" />
-        <option value="$PROJECT_DIR$/src/ltp/lib/quantum/Bootstrap.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/Bootstrap.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/Mod.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModInfo.java" />
-        <option value="$PROJECT_DIR$/src/mixin/MixinMinecraftMain.java" />
-        <option value="$PROJECT_DIR$/src/mixin/MixinMinecraft.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/mixin/MinecraftAccessor.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/mixin/MixinMinecraft.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModFileFilter.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ClassTransformer.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ClassModifier.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/Quantum.java" />
-        <option value="/usr/lib/jvm/java-8-jdk/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/util/JVM.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/ModLoader.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/BootstrapAgent.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/mod/Mod.java" />
-        <option value="$PROJECT_DIR$/src/ltp/quantum/bootstrap/Bootstrap.java" />
+        <option value="$PROJECT_DIR$/src/quantum/mod/minecraft/ModMinecraft.java" />
+        <option value="$PROJECT_DIR$/src/quantum/bootstrap/ModManager.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/entity/EntityAdapter.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/entity/EntityAccessor.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/entity/Entity.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/resource/texture/Texture.java" />
+        <option value="$PROJECT_DIR$/src/quantum/model/texture/AbstractTexture.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/block/Block.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/model/BlockEntityModelAdapter.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/QuantumResourceManager.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/bootstrap/MCClassModifier.java" />
+        <option value="$PROJECT_DIR$/src/quantum/bootstrap/SpongeClassModifier.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/mixin/mixins.quantum.wrapper.json" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/mixin/MixinModelBakery.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/mixin/CTModelBakery.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/mixin/CMModelBakery.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMModelBakery.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/QModelManager.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/QuantumExtendedResourcePack.java" />
+        <option value="$PROJECT_DIR$/src/quantum/bootstrap/BootstrapTransformer.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/model/QModelManager.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/Sprites.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/model/ModelAdapter.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/model/SpriteBuilder.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/model/TextureConverter.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/sprite/QSprite.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/resource/Resource.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/resource/loader/ResourceLoader.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/resource/AbstractResource.java" />
+        <option value="$PROJECT_DIR$/src/quantum/model/texture/Texture.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/resource/TextureResource.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/resource/DefaultResourcePack.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/QuantumResourceManager.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/resource/loader/TextureLoader.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMMinecraft.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMTextureMap.java" />
+        <option value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/QuantumExtendedResourcePack.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/resource/ResourcePack.java" />
+        <option value="$PROJECT_DIR$/src/quantum/model/Model.java" />
         <option value="$PROJECT_DIR$/src/quantum/Quantum.java" />
-        <option value="$PROJECT_DIR$/src/quantum/mod/Mod.java" />
-        <option value="$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java" />
+        <option value="$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java" />
+        <option value="$PROJECT_DIR$/src/quantum/model/Cube.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/block/model/BlockModel.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/resource/AbstractResourcePack.java" />
+        <option value="$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/model/CustomModel.java" />
+        <option value="$PROJECT_DIR$/QUnit/src/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/src/quantum/model/texture/Image.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/block/BlockBuilder.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/block/AbstractBlock.java" />
+        <option value="$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java" />
+        <option value="$PROJECT_DIR$/src/quantum/api/world/BlockEntity.java" />
       </list>
     </option>
   </component>
@@ -141,7 +293,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="27" />
     <option name="width" value="1366" />
-    <option name="height" value="708" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -215,12 +367,12 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
@@ -229,91 +381,77 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Quantum API">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quantum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Quantum API">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quantum API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QUnit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quantum API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quantum API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="/usr/lib/jvm/java-8-jdk/lib/dt.jar!/" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/QUnit/src/META-INF/MANIFEST.MF" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
     <property name="settings.editor.splitter.proportion" value="0.27210885" />
     <property name="ToolWindowMaven Projects.ShowToolbar" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/quantum/mods" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="quantum" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="quantum.mod" />
     </key>
@@ -346,6 +484,42 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="D" factoryName="dUnit Unit Tests" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="dFilePath" />
+      <option name="envVars">
+        <map />
+      </option>
+      <option name="workingDir" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DLanguageRunDubConfiguration" factoryName="Build with DUB" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="" />
+      <option name="additionalParams" />
+      <option name="buildMode" value="0" />
+      <option name="cbCombined" value="false" />
+      <option name="cbCoverage" value="false" />
+      <option name="cbForce" value="false" />
+      <option name="cbForceRemove" value="false" />
+      <option name="cbNoDeps" value="false" />
+      <option name="cbParallel" value="false" />
+      <option name="cbRdmd" value="false" />
+      <option name="cbTempBuild" value="false" />
+      <option name="envVars">
+        <map />
+      </option>
+      <option name="generalDubOptions" value="1" />
+      <option name="quiet" value="false" />
+      <option name="tfArch" />
+      <option name="tfBuild" />
+      <option name="tfCompiler" />
+      <option name="tfConfig" />
+      <option name="tfDebug" />
+      <option name="tfMainFile" />
+      <option name="verbose" value="false" />
+      <option name="workingDir" />
+      <module name="" />
       <method />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -407,7 +581,7 @@
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <envs />
       <method />
     </configuration>
@@ -564,7 +738,7 @@
     <configuration default="false" name="Minecraft" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="net.minecraft.client.main.Main" />
-      <option name="VM_PARAMETERS" value="-javaagent:&quot;$PROJECT_DIR$/quantum_api.jar&quot;=&quot;mod_directory=~/.minecraft/quantum/mod&quot; -Djava.library.path=lib/Minecraft/natives/lwjgl" />
+      <option name="VM_PARAMETERS" value="-XX:+DisableExplicitGC -javaagent:&quot;$PROJECT_DIR$/quantum_api.jar&quot;=&quot;mod_directory=~/.minecraft/quantum/mod&quot; -Djava.library.path=lib/Minecraft/natives/lwjgl" />
       <option name="PROGRAM_PARAMETERS" value="--version mcp --accessToken 0 --assetsDir $USER_HOME$/.minecraft/assets --assetIndex 1.8 --userProperties {}" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Minecraft" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -574,10 +748,27 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Quantum API" />
       <envs />
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="quantum_api:jar" />
+        </option>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="QUnit:jar" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="false" name="quantum_api.jar" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/quantum_api.jar" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <envs />
+      <module name="Quantum API" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Minecraft" />
+      <item index="1" class="java.lang.String" itemvalue="JAR Application.quantum_api.jar" />
     </list>
   </component>
   <component name="SbtLocalSettings">
@@ -587,6 +778,10 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_FIELDS,SHOW_PROPERTIES" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -708,32 +903,57 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="708" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31260794" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5916399" sideWeight="0.5121212" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30602008" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59067357" sideWeight="0.5121212" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59067357" sideWeight="0.4878788" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26022306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30438066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22669649" sideWeight="0.36287627" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27815065" sideWeight="0.63712376" order="2" side_tool="true" content_ui="tabs" x="508" y="237" width="350" height="287" />
+      <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.24916388" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="92" y="137" width="1166" height="541" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32441473" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32636657" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31438127" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3089701" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59067357" sideWeight="0.5121212" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59067357" sideWeight="0.4878788" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28843337" sideWeight="0.41694352" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3156146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28843337" sideWeight="0.58305645" order="2" side_tool="true" content_ui="tabs" x="508" y="237" width="350" height="287" />
+      <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -747,6 +967,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <confirmMoveToFailedCommit value="1" />
     <MESSAGE value="updated workspace.xml" />
     <MESSAGE value="fixed compile errors due to removing @Untested annotation" />
     <MESSAGE value="Rebase" />
@@ -761,11 +983,23 @@
     <MESSAGE value="Create the initial mod loading functionality" />
     <MESSAGE value="Rename base package ltp.quantum to quantum" />
     <MESSAGE value="Create the initial mod loading functionality&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create the initial mod loading functionality&#10;" />
+    <MESSAGE value="Remove Block.isFlowerPot()" />
+    <MESSAGE value="Prepare for 1.0b release" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prepare for 1.0b release" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../Minecraft/src/net/minecraft/block/Block.java</url>
+          <line>1364</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -774,295 +1008,435 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
+    <entry file="file://$PROJECT_DIR$/../Minecraft/src/net/minecraft/client/resources/SimpleReloadableResourceManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="17">
+          <caret line="110" column="45" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
+    <entry file="file://$PROJECT_DIR$/../javassist/src/javassist/CtClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="54" column="62" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="188">
+          <caret line="315" column="16" selection-start-line="315" selection-start-column="16" selection-end-line="315" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/BootstrapAgent.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/QuantumResourceManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/block/StateAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="110">
+          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
-            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
-            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/BootstrapAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/block/BlockAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding />
+          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMModelBakery.java" />
+    <entry file="jar:///usr/lib/jvm/java-8-jdk/src.zip!/java/util/HashSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+        <state relative-caret-position="1255">
+          <caret line="130" column="11" selection-start-line="130" selection-start-column="11" selection-end-line="130" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-jdk/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="281" column="30" selection-start-line="281" selection-start-column="30" selection-end-line="281" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/block/StateAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Minecraft/src/net/minecraft/client/resources/DefaultResourcePack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Minecraft/src/net/minecraft/client/renderer/texture/TextureMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Minecraft/src/net/minecraft/client/resources/model/ModelBakery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="89" column="30" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/model/QModelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/renderer/texture/QTextureMap.java" />
+    <entry file="file://$PROJECT_DIR$/../javassist/src/javassist/CtBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-636">
+          <caret line="426" column="16" selection-start-line="426" selection-start-column="16" selection-end-line="426" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Minecraft/src/net/minecraft/client/resources/model/ModelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Minecraft/src/net/minecraft/client/renderer/texture/TextureAtlasSprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/model/TextureConverter.java" />
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/Sprites.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
-            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
-            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/model/BlockEntityModelAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-jdk/src.zip!/java/io/InputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2464">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/resource/loader/ResourceLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/resource/AbstractResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/logger/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/model/texture/Texture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="150" column="43" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/BootstrapAgent.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/sprite/QSprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="74">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/resource/TextureResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/resource/DefaultResourcePack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/QuantumResourceManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="387">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/resource/loader/TextureLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
-            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
-            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMMinecraft.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="186">
+          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/BootstrapAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
-            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
-            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/BootstrapAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
-            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
-            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/BootstrapAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
-            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
-            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/mod/Mod.java" />
-    <entry file="file://$PROJECT_DIR$/src/ltp/quantum/bootstrap/util/JVM.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="54" column="62" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/BootstrapAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/mod/Mod.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMTextureMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/resource/ResourcePack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/QuantumExtendedResourcePack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="93" column="84" selection-start-line="93" selection-start-column="84" selection-end-line="93" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/resource/Resource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Minecraft/src/net/minecraft/client/renderer/BlockModelShapes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="126" column="49" selection-start-line="126" selection-start-column="49" selection-end-line="126" selection-end-column="49" />
+          <folding>
+            <element signature="docComment;class#Quantum#0" expanded="false" />
+            <element signature="docComment;field#MC_DIRECTORY#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;field#MC_ASSETS#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;field#BLOCKS#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;field#ENTITIES#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;field#ITEMS#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;field#DIMENSIONS#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;field#MODS#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;field#TICK_HOOKS#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;field#resourcePack#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#define#0;class#Quantum#0" expanded="false" />
+            <element signature="method#define#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#redefine#0;class#Quantum#0" expanded="false" />
+            <element signature="method#redefine#0;class#Quantum#0" expanded="false" />
+            <element signature="method#registerBlockModel#0;class#Quantum#0" expanded="false" />
+            <element signature="method#unregisterBlockModel#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#define#1;class#Quantum#0" expanded="false" />
+            <element signature="method#define#1;class#Quantum#0" expanded="false" />
+            <element signature="method#redefine#1;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#define#2;class#Quantum#0" expanded="false" />
+            <element signature="method#define#2;class#Quantum#0" expanded="false" />
+            <element signature="method#redefine#2;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#define#3;class#Quantum#0" expanded="false" />
+            <element signature="method#define#3;class#Quantum#0" expanded="false" />
+            <element signature="method#redefine#3;class#Quantum#0" expanded="false" />
+            <element signature="method#remove#0;class#Quantum#0" expanded="false" />
+            <element signature="method#addTickHook#0;class#Quantum#0" expanded="false" />
+            <element signature="method#removeTickHook#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#abort#0;class#Quantum#0" expanded="false" />
+            <element signature="method#abort#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getName#0;class#Quantum#0" expanded="false" />
+            <element signature="method#getName#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getFormalName#0;class#Quantum#0" expanded="false" />
+            <element signature="method#getFormalName#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getAPIVersion#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getWrapperVersion#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getMinecraftVersion#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getMinecraftDir#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getMinecraftAssetsDir#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getResourcePack#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getOS#0;class#Quantum#0" expanded="false" />
+            <element signature="method#getOS#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getBlock#0;class#Quantum#0" expanded="false" />
+            <element signature="docComment;method#getEntity#0;class#Quantum#0" expanded="false" />
+            <element signature="method#getEntity#0;class#Quantum#0" expanded="false" />
+            <element signature="initializer##0;class#Block#0;class#Vanilla#0;class#Quantum#0" expanded="false" />
+            <element signature="initializer##0;class#Entity#0;class#Vanilla#0;class#Quantum#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-jdk/src.zip!/java/lang/instrument/ClassDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/BootstrapTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="244">
+          <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/block/model/BlockModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1466886223508" expanded="false" signature="612:1211" ph="{...}" />
-            <marker date="1466886223508" expanded="false" signature="636:1190" ph="{...}" />
-            <marker date="1466886223508" expanded="true" signature="791:1162" ph="..." />
+            <element signature="docComment;class#BlockModel#0" expanded="false" />
+            <element signature="docComment;field#model#0;class#BlockModel#0" expanded="false" />
+            <element signature="docComment;field#color#0;class#BlockModel#0" expanded="false" />
+            <element signature="docComment;method#BlockModel#0;class#BlockModel#0" expanded="false" />
+            <element signature="e#2295#2296#0" expanded="false" />
+            <element signature="e#2328#2329#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/model/Cube.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <caret line="163" column="13" selection-start-line="163" selection-start-column="13" selection-end-line="163" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#Cube#0" expanded="false" />
+            <element signature="docComment;field#color#0;class#Cube#0" expanded="false" />
+            <element signature="docComment;field#top#0;class#Cube#0" expanded="false" />
+            <element signature="docComment;method#Cube#0;class#Cube#0" expanded="false" />
+            <element signature="docComment;method#getTop#0;class#Cube#0" expanded="false" />
+            <element signature="docComment;method#getNorth#0;class#Cube#0" expanded="false" />
+            <element signature="docComment;method#getEast#0;class#Cube#0" expanded="false" />
+            <element signature="docComment;method#getSouth#0;class#Cube#0" expanded="false" />
+            <element signature="docComment;method#getWest#0;class#Cube#0" expanded="false" />
+            <element signature="docComment;method#getBottom#0;class#Cube#0" expanded="false" />
+            <element signature="docComment;method#getTexture#0;class#Cube#0" expanded="false" />
+            <element signature="method#getTexture#0;class#Cube#0" expanded="false" />
+            <element signature="method#getTextures#0;class#Cube#0" expanded="false" />
+            <element signature="docComment;class#Face#0;class#Cube#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/resource/AbstractResourcePack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#1503#1504#0" expanded="false" />
+            <element signature="e#2275#2276#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QUnit/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/model/CustomModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="38" column="88" selection-start-line="38" selection-start-column="88" selection-end-line="38" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/model/texture/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/block/BlockBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-783">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="method#id#0;class#BlockBuilder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/block/AbstractBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/api/world/BlockEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,10 +1446,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>quantum_api:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1095,7 +1471,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Minecraft</last-edited>
+          <last-edited>Mixin</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1119,7 +1495,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Quantum API</last-edited>
+          <last-edited>QUnit</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

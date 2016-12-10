@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2015 link.
+ * Copyright 2016 link.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 12/24/15 at 10:00 AM.
+ * Created file on 6/26/16 at 1:45 PM.
  *
  * This file is part of Quantum API
  */
@@ -30,10 +30,15 @@ package quantum.util;
 /**
  * @author link
  */
-public interface Property<T, V> {
+public interface Property<V> {
 
-	T getName();
+	String getName();
 
 	V getValue();
+
+	@SuppressWarnings("unchecked")
+	default Class<V> getType() {
+		return (Class<V>) getValue().getClass();
+	}
 
 }

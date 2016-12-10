@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2015 link.
+ * Copyright 2016 link.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 12/24/15 at 3:43 PM.
+ * Created file on 6/26/16 at 2:46 PM.
  *
  * This file is part of Quantum API
  */
@@ -32,12 +32,12 @@ import quantum.util.Property;
 /**
  * @author link
  */
-public final class BlockProperty implements Property<String, Object> {
+public final class BlockProperty<V> implements Property<V> {
 
 	private final String name;
-	private final Object value;
+	private final V      value;
 
-	public BlockProperty(String name, Object value) {
+	public BlockProperty(String name, V value) {
 		this.name = name;
 		this.value = value;
 	}
@@ -48,8 +48,7 @@ public final class BlockProperty implements Property<String, Object> {
 	}
 
 	@Override
-	public Object getValue() {
+	public V getValue() {
 		return value;
 	}
-
 }
