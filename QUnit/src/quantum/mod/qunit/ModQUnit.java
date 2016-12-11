@@ -33,10 +33,12 @@ import quantum.Quantum;
 import quantum.api.block.Block;
 import quantum.api.block.BlockBuilder;
 import quantum.mod.Mod;
+import quantum.mod.qunit.model.CustomModel;
 import quantum.model.Model;
 
 import java.io.PrintStream;
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * @author link
@@ -45,8 +47,16 @@ public final class ModQUnit implements Mod {
 
 	@Override
 	public void load(Quantum quantum) {
+
 		quantum.define(new BlockBuilder().name("testBlock")
 		                                 .id("test_block")
+		                                 .model(new CustomModel())
+		                                 .variant("textBlock")
+		                                 .type(new Block.Type(Collections.emptyList()))
+		                                 .variantIndex(0)
+		                                 .variants(Collections.emptyMap())
+		                                 .drops(null) // TODO
+		                                 .states(Collections.emptyList())
 		                                 .build());
 		run(quantum);
 	}

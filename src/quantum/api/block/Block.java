@@ -370,6 +370,14 @@ public interface Block extends MinecraftObject, Serializable {
 			return TYPES.get(name);
 		}
 
+		public static void add(String name, Type type) {
+			TYPES.put(name, type);
+		}
+
+		public static void remove(String name) {
+			TYPES.remove(name);
+		}
+
 		private Map<String, Property<?>> properties = new HashMap<>();
 
 		/**
