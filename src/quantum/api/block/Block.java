@@ -366,18 +366,43 @@ public interface Block extends MinecraftObject, Serializable {
 		public static final  Property<Boolean> INVINCIBLE = new BlockProperty<>("invincible", Boolean.TRUE);
 		private static final Map<String, Type> TYPES      = new HashMap<>();
 
+		/**
+		 * Gets the Type with the given name
+		 *
+		 * @param name
+		 * 		the name of the Block.Type
+		 *
+		 * @return the Block.Type with the given name, or null if it does not
+		 * exist
+		 */
 		public static Type get(String name) {
 			return TYPES.get(name);
 		}
 
+		/**
+		 * Adds the Type with the given name and type
+		 *
+		 * @param name
+		 * 		the name of the Block.Type
+		 * @param type
+		 * 		the Block.Type to associate with the given name
+		 */
 		public static void add(String name, Type type) {
 			TYPES.put(name, type);
 		}
 
+		/**
+		 * removes the Type with the given name
+		 *
+		 * @param name the name of the Block.Type
+		 */
 		public static void remove(String name) {
 			TYPES.remove(name);
 		}
 
+		/**
+		 * The map of names to properties for this Block.Type
+		 */
 		private Map<String, Property<?>> properties = new HashMap<>();
 
 		/**
@@ -401,14 +426,32 @@ public interface Block extends MinecraftObject, Serializable {
 		 * @return the property
 		 */
 		@SuppressWarnings("unchecked")
-		public final <V> Property<V> getProperty(String property) {
-			return (Property<V>) properties.get(property);
+		public final <V> Property<V> getProperty(String property, Class<V> value) {
+			return (Property<V>) value.cast(properties.get(property));
 		}
 
+		/**
+		 * Sets the given {@link Property} for this Type.
+		 *
+		 * @param property
+		 * 		the property to set
+		 * @param <V>
+		 * 		the type of the Property
+		 */
 		protected final <V> void setProperty(Property<V> property) {
 			properties.put(property.getName(), property);
 		}
 
+		/**
+		 * Sets the given {@link Property} for this Type.
+		 *
+		 * @param name
+		 * 		the name of the property to set
+		 * @param value
+		 * 		the value of the property to set
+		 * @param <V>
+		 * 		the type of the value of the property to set
+		 */
 		protected final <V> void setProperty(String name, V value) {
 			properties.putIfAbsent(name, new BlockProperty<>(name, value));
 		}

@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="Prepare for 1.0b release">
+    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="Allow adding and removing Block.Types">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java" afterPath="$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/api/block/Block.java" afterPath="$PROJECT_DIR$/src/quantum/api/block/Block.java" />
@@ -35,12 +35,12 @@
         <entry file="file://$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
-              <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+              <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
               <folding>
-                <element signature="e#0#4700#0" expanded="false" />
+                <element signature="e#0#4670#0" expanded="false" />
                 <element signature="imports" expanded="false" />
-                <element signature="e#4677#4678#0" expanded="false" />
-                <element signature="e#4695#4696#0" expanded="false" />
+                <element signature="e#4647#4648#0" expanded="false" />
+                <element signature="e#4665#4666#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -62,9 +62,15 @@
       <file leaf-file-name="Block.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/quantum/api/block/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="376" column="0" selection-start-line="376" selection-start-column="0" selection-end-line="376" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="231">
+              <caret line="416" column="0" selection-start-line="416" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;method#Type#0;class#Type#0;class#Block#0" expanded="false" />
+                <element signature="method#Type#0;class#Type#0;class#Block#0" expanded="false" />
+                <element signature="docComment;method#getProperty#0;class#Type#0;class#Block#0" expanded="false" />
+                <element signature="method#getProperty#0;class#Type#0;class#Block#0" expanded="false" />
+                <element signature="docComment;method#setProperty#0;class#Type#0;class#Block#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -791,7 +797,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481338686202</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Allow adding and removing Block.Types">
+      <created>1481426689146</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1481426689146</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -877,7 +890,8 @@
     <MESSAGE value="Create the initial mod loading functionality&#10;" />
     <MESSAGE value="Remove Block.isFlowerPot()" />
     <MESSAGE value="Prepare for 1.0b release" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prepare for 1.0b release" />
+    <MESSAGE value="Allow adding and removing Block.Types" />
+    <option name="LAST_COMMIT_MESSAGE" value="Allow adding and removing Block.Types" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -900,7 +914,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/QuantumResourceManager.java" />
     <entry file="file://$PROJECT_DIR$/src/quantum/wrapper/minecraft/block/StateAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1201,12 +1214,12 @@
     <entry file="file://$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
-          <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+          <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
           <folding>
-            <element signature="e#0#4700#0" expanded="false" />
+            <element signature="e#0#4670#0" expanded="false" />
             <element signature="imports" expanded="false" />
-            <element signature="e#4677#4678#0" expanded="false" />
-            <element signature="e#4695#4696#0" expanded="false" />
+            <element signature="e#4647#4648#0" expanded="false" />
+            <element signature="e#4665#4666#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1272,6 +1285,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1286,11 +1300,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/quantum/api/block/Block.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="376" column="0" selection-start-line="376" selection-start-column="0" selection-end-line="376" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="231">
+          <caret line="416" column="0" selection-start-line="416" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#Type#0;class#Type#0;class#Block#0" expanded="false" />
+            <element signature="method#Type#0;class#Type#0;class#Block#0" expanded="false" />
+            <element signature="docComment;method#getProperty#0;class#Type#0;class#Block#0" expanded="false" />
+            <element signature="method#getProperty#0;class#Type#0;class#Block#0" expanded="false" />
+            <element signature="docComment;method#setProperty#0;class#Type#0;class#Block#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
