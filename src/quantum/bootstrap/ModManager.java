@@ -61,9 +61,12 @@ public class ModManager {
 		for (ModLoader.ModManifest manifest : mods) {
 			Mod mod = manifest.getMod();
 			URLClassLoader cl = manifest.getClassLoader();
-
-			mod.load(quantum);
-
+			try {
+				mod.load(quantum);
+			} catch (Throwable e) {
+				System.err.println("[Quantum][Error] An error was thrown while loading mod \"" + mod + "\":");
+				e.printStackTrace();
+			}
 			this.mods.putIfAbsent(mod, cl);
 			modNameMap.putIfAbsent(mod.getName(), mod);
 		}
@@ -71,7 +74,12 @@ public class ModManager {
 
 	public void load(String mod, String jar, Quantum quantum) throws IOException, ClassNotFoundException, IllegalAccessException {
 		Mod m = ModLoader.load(jar).getMod();
-		m.load(quantum);
+		try {
+			m.load(quantum);
+		} catch (Throwable e) {
+			System.err.println("[Quantum][Error] An error was thrown while loading mod \"" + mod + "\":");
+			e.printStackTrace();
+		}
 	}
 
 	public void unload(String mod, Quantum quantum) {

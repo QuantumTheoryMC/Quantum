@@ -144,6 +144,9 @@ public final class Quantum {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			System.err.println("[Quantum] An Exception was thrown during initialization");
+			e.printStackTrace();
 		}
 		else System.out.println("[Quantum]     No mods found...");
 

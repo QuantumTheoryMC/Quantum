@@ -49,7 +49,8 @@ public final class ModQUnit implements Mod {
 	public void load(Quantum quantum) {
 
 		quantum.define(new BlockBuilder().name("testBlock")
-		                                 .id("test_block").mod(this)
+		                                 .id("test_block")
+		                                 .mod(this)
 		                                 .model(new CustomModel())
 		                                 .variant("textBlock")
 		                                 .type(new Block.Type(Collections.emptyList()))

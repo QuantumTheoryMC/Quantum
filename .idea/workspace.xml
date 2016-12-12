@@ -6,34 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="Require explicit type for Block.Type.setProperty(String, Class&lt;V&gt;) and finish documenting Block.Type">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/quantum_agent_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/quantum_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/quantum_wrapper_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/api/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/cm/CMLocale.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/QResourceLocation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/runtime/Tickable.java" afterPath="$PROJECT_DIR$/src/quantum/api/world/tick/Tickable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMMinecraft.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/cm/CMMinecraft.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMTextureMap.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/cm/CMTextureMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/QUnit_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/QUnit_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/quantum_api_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/quantum_api_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/link.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/link.xml" />
+    <list default="true" id="63e2c812-3a38-4874-9a9d-3744ff5262e9" name="Default" comment="Fix and amend ClassModifiers">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java" afterPath="$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/dictionaries/link.xml" afterPath="$PROJECT_DIR$/out/production/Quantum API/.idea/dictionaries/link.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Quantum API/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/production/Quantum API/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Quantum API/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/production/Quantum API/src/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/Quantum.java" afterPath="$PROJECT_DIR$/src/quantum/Quantum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/api/block/AbstractBlock.java" afterPath="$PROJECT_DIR$/src/quantum/api/block/AbstractBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/bootstrap/BootstrapTransformer.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/BootstrapTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/QuantumExtendedResourcePack.java" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/client/resources/QuantumExtendedResourcePack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/sprite/QSprite.java" afterPath="$PROJECT_DIR$/src/quantum/wrapper/minecraft/sprite/QSprite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quantum/bootstrap/ModManager.java" afterPath="$PROJECT_DIR$/src/quantum/bootstrap/ModManager.java" />
     </list>
     <ignored path="Quantum API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,19 +40,19 @@
         <entry file="file://$PROJECT_DIR$/src/quantum/api/block/AbstractBlock.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1042">
-              <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding>
-                <element signature="e#3673#3674#0" expanded="true" />
+                <element signature="e#3670#3671#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Quantum.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Quantum.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="129" column="58" selection-start-line="129" selection-start-column="58" selection-end-line="129" selection-end-column="58" />
+            <state relative-caret-position="143">
+              <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
               <folding>
                 <element signature="docComment;class#Quantum#0" expanded="false" />
                 <element signature="docComment;field#MC_DIRECTORY#0;class#Quantum#0" expanded="false" />
@@ -126,6 +107,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ModManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ModQUnit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QUnit/src/quantum/mod/qunit/ModQUnit.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -167,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/quantum/wrapper/mixin/MixinModelBakery.java" />
         <option value="$PROJECT_DIR$/src/quantum/wrapper/mixin/CTModelBakery.java" />
         <option value="$PROJECT_DIR$/src/quantum/wrapper/mixin/CMModelBakery.java" />
         <option value="$PROJECT_DIR$/src/quantum/wrapper/bootstrap/CMModelBakery.java" />
@@ -218,6 +208,7 @@
         <option value="$PROJECT_DIR$/src/quantum/bootstrap/cm/CMLocale.java" />
         <option value="$PROJECT_DIR$/src/quantum/bootstrap/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/quantum/Quantum.java" />
+        <option value="$PROJECT_DIR$/src/quantum/bootstrap/ModManager.java" />
       </list>
     </option>
   </component>
@@ -345,118 +336,7 @@
         </subPane>
       </pane>
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QUnit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QUnit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quantum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mod" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qunit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Quantum API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QUnit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="PackagesPane">
         <subPane>
@@ -975,7 +855,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481427140664</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fix and amend ClassModifiers">
+      <created>1481577202094</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1481577202102</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1063,7 +950,8 @@
     <MESSAGE value="Prepare for 1.0b release" />
     <MESSAGE value="Allow adding and removing Block.Types" />
     <MESSAGE value="Require explicit type for Block.Type.setProperty(String, Class&lt;V&gt;) and finish documenting Block.Type" />
-    <option name="LAST_COMMIT_MESSAGE" value="Require explicit type for Block.Type.setProperty(String, Class&lt;V&gt;) and finish documenting Block.Type" />
+    <MESSAGE value="Fix and amend ClassModifiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix and amend ClassModifiers" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1078,13 +966,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/quantum/api/resource/TextureResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/quantum/api/resource/DefaultResourcePack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -1337,7 +1218,7 @@
         <state relative-caret-position="221">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="e#0#2905#0" expanded="false" />
+            <element signature="e#0#2902#0" expanded="false" />
             <element signature="e#1685#1686#0" expanded="false" />
             <element signature="e#1724#1725#0" expanded="false" />
             <element signature="e#1966#1967#0" expanded="false" />
@@ -1351,7 +1232,7 @@
         <state relative-caret-position="238">
           <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
           <folding>
-            <element signature="e#0#2509#0" expanded="false" />
+            <element signature="e#0#2619#0" expanded="false" />
             <element signature="imports" expanded="false" />
             <element signature="docComment;class#CMMinecraft#0" expanded="false" />
           </folding>
@@ -1412,8 +1293,8 @@
           <caret line="45" column="138" selection-start-line="45" selection-start-column="138" selection-end-line="45" selection-end-column="138" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1792#1794#0" expanded="true" />
-            <element signature="e#1796#1800#0" expanded="true" />
+            <element signature="e#1793#1795#0" expanded="true" />
+            <element signature="e#1797#1801#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1447,9 +1328,9 @@
     <entry file="file://$PROJECT_DIR$/src/quantum/api/block/AbstractBlock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1042">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding>
-            <element signature="e#3673#3674#0" expanded="true" />
+            <element signature="e#3670#3671#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1464,8 +1345,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/quantum/Quantum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="129" column="58" selection-start-line="129" selection-start-column="58" selection-end-line="129" selection-end-column="58" />
+        <state relative-caret-position="143">
+          <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="20" />
           <folding>
             <element signature="docComment;class#Quantum#0" expanded="false" />
             <element signature="docComment;field#MC_DIRECTORY#0;class#Quantum#0" expanded="false" />
@@ -1516,6 +1397,14 @@
             <element signature="initializer##0;class#Block#0;class#Vanilla#0;class#Quantum#0" expanded="false" />
             <element signature="initializer##0;class#Entity#0;class#Vanilla#0;class#Quantum#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quantum/bootstrap/ModManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
