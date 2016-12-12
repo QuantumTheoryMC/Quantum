@@ -27,6 +27,7 @@
  */
 package quantum.wrapper.minecraft.sprite;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import quantum.model.texture.Texture;
 
@@ -40,8 +41,9 @@ public class QSprite extends TextureAtlasSprite {
 
 	public QSprite(String iconName, Texture[] frames) {
 		super(iconName);
-		setIconWidth(frames[0].getWidth());
-		setIconHeight(frames[0].getHeight());
+		boolean hasFrames = frames[0] != null;
+		setIconWidth(hasFrames ? frames[0].getWidth() : 16);
+		setIconHeight(hasFrames ? frames[0].getHeight() : 16);
 		setFramesTextureData(list(convertAll(frames)));
 	}
 
@@ -49,6 +51,10 @@ public class QSprite extends TextureAtlasSprite {
 	//[0 0 0 0]
 	//[0 0 0 0]
 	private static int[][] convert(Texture frame) {
+		if (frame == null) return Minecraft.getMinecraft()
+		                                   .getTextureMapBlocks()
+		                                   .func_174944_f()
+		                                   .getFrameTextureData(0);
 		int[][] texture = new int[frame.getWidth()][frame.getHeight()];
 		int width = frame.getWidth();
 
@@ -64,8 +70,10 @@ public class QSprite extends TextureAtlasSprite {
 	private static int[][][] convertAll(Texture[] frames) {
 		int[][][] frameSet = new int[frames.length][frames[0].getWidth()][frames[0]
 				                                                                  .getHeight()];
+		// copy data into frame array
 		int i = 0;
 		for (Texture texture : frames) {
+			// convert texture to 2D array of texels
 			frameSet[i] = convert(texture);
 			i++;
 		}

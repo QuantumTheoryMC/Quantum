@@ -67,8 +67,8 @@ import java.util.Set;
  */
 public final class QuantumExtendedResourcePack extends DefaultResourcePack implements IResourcePack {
 
-	private static final Set<String> DOMAINS = new HashSet<>(4, 0.9f);
-
+	private static final Set<String> DOMAINS  = new HashSet<>(4, 0.9f);
+	private static       int         resource = 0;
 
 	static {
 		DOMAINS.addAll(defaultResourceDomains);
@@ -100,11 +100,14 @@ public final class QuantumExtendedResourcePack extends DefaultResourcePack imple
 
 	@Override
 	public InputStream getInputStream(ResourceLocation location) throws IOException {
+		// TODO quantum default resources
 		return location.getResourceDomain()
 		               .contains("quantum") ? getStream(location) : super.getInputStream(location);
 	}
 
 	private static InputStream getStream(ResourceLocation location) throws IOException {
+		// debug
+		System.out.println("[ExtResourcePack] resource[" + resource++ + "] domain: " + location.getResourceDomain() + ", path: " + location.getResourcePath());
 		Path resource = Paths.get(Quantum.getMinecraftDir()
 		                                 .toString(), "quantum", "mods", location.getResourceDomain()
 		                                                                         .split("/")[1], "resources", location.getResourcePath());
@@ -113,7 +116,7 @@ public final class QuantumExtendedResourcePack extends DefaultResourcePack imple
 
 	@Override
 	public final boolean resourceExists(ResourceLocation location) {
-		if (location.getResourceDomain().equals("quantum")) {
+		if (location.getResourceDomain().contains("quantum/")) {
 			return true;
 		}
 
@@ -127,6 +130,6 @@ public final class QuantumExtendedResourcePack extends DefaultResourcePack imple
 
 	@Override
 	public final String getPackName() {
-		return "Quantum Extended";
+		return "Quantum Extended Default";
 	}
 }

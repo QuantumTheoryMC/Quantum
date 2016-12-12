@@ -21,11 +21,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 12/5/16 at 5:03 PM.
+ * Created file on 12/12/16 at 3:28 PM.
  *
  * This file is part of Quantum API
  */
-package quantum.wrapper.bootstrap;
+package quantum.bootstrap.cm;
 
 import javassist.CannotCompileException;
 import javassist.CtClass;
@@ -36,23 +36,18 @@ import quantum.bootstrap.ClassModifier;
 /**
  * @author link
  */
-public final class CMMinecraft implements ClassModifier {
+public final class CMLocale implements ClassModifier {
 
 	@Override
 	public void modify(String className, CtClass modify) {
-		String line;
-		try {
-			CtMethod main = modify.getDeclaredMethod("main");
-			// insert Quantum's ResourcePack
-			main.insertAt(558, "this.mcDefaultResourcePack = new quantum.wrapper.minecraft.client.resources.QuantumExtendedResourcePack((new ResourceIndex(p_i45547_1_.field_178744_c.field_178759_c, p_i45547_1_.field_178744_c.field_178757_d)).func_152782_a());\n");
-			// insert Quantum's ModelManager
-			main.insertAt(537, "this.modelManager = new quantum.wrapper.minecraft.client.resources.model.ModelManager(this.textureMapBlocks);");
-			// insert Quantum's ResourceManager
-			main.insertAt(477, "this.mcResourceManager = new quantum.wrapper.minecraft.client.resources.QuantumResourceManager(this.metadataSerializer_);");
-		} catch (NotFoundException e) {
-			e.printStackTrace();
-		} catch (CannotCompileException e) {
-			e.printStackTrace();
+		if (className.equals("net/minecraft/client/resources/Locale")) {
+			try {
+				CtMethod loadLocaleDataFiles = modify.getDeclaredMethod("loadLocaleDataFiles");
+				System.out.println("[CMLocale] line: " + loadLocaleDataFiles.insertAt(43, true, "if (!var7.equals(\"quantum\")) { break; }\n"));
+			} catch (CannotCompileException | NotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 	}
+
 }

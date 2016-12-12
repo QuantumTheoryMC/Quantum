@@ -30,22 +30,27 @@ package quantum;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.statemap.StateMap;
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.resources.model.ModelManager;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.entity.EntityList;
+import net.minecraft.util.ResourceLocation;
 import quantum.api.block.Block;
+import quantum.api.block.model.BlockModel;
 import quantum.api.dimension.Dimension;
 import quantum.api.entity.Entity;
 import quantum.api.item.Item;
 import quantum.api.resource.Resource;
 import quantum.api.resource.ResourcePack;
+import quantum.api.world.tick.Tickable;
 import quantum.bootstrap.ModManager;
 import quantum.mod.Mod;
-import quantum.runtime.Tickable;
+import quantum.model.texture.Texture;
 import quantum.wrapper.entity.EntityAdapter;
 import quantum.wrapper.minecraft.Sprites;
 import quantum.wrapper.minecraft.block.BlockAdapter;
 import quantum.wrapper.minecraft.block.StateAdapter;
+import quantum.wrapper.minecraft.client.resources.QResourceLocation;
 import quantum.wrapper.minecraft.sprite.QSprite;
 
 import java.io.IOException;
@@ -122,13 +127,13 @@ public final class Quantum {
 
 	public static void main(String... args) {
 		// TODO print to logger
-		System.out.println("[Quantum] Initializing Quantum Ecosystem...");
+		System.out.println("[Quantum] Initializing Quantum...");
 		// [init]
 		resourcePack = ResourcePack.getDefault();
 		// [/init]
-		System.out.println("[Quantum]     Searching for mods...");
+		System.out.println("[Quantum] Searching for mods...");
 		Path mods = Paths.get("/", "home", "link", ".minecraft", "quantum", "mods");
-
+		System.out.println("[Quantum] (path: \"" + mods + "\")");
 		if (mods.toFile().listFiles().length != 0) try {
 			QUANTUM.enable();
 			MODS.loadAll(mods, QUANTUM);
@@ -142,7 +147,7 @@ public final class Quantum {
 		}
 		else System.out.println("[Quantum]     No mods found...");
 
-		System.out.println("[Quantum] Exiting Quantum initialization...");
+		System.out.println("[Quantum] Finished Quantum initialization...");
 	}
 
 
@@ -207,10 +212,13 @@ public final class Quantum {
 
 	private void registerBlockModel(Block block) {
 		// register default state block model
-		Resource model = block.getModel().getResource();
-		ModelResourceLocation location = new ModelResourceLocation(model.getPath(), block.getName());
-		Sprites.set(location, new QSprite(block.getName(), block.getModel()
-		                                                        .getTextures()));
+		Resource resource = block.getModel().getResource();
+		ResourceLocation location = resource != null ? new QResourceLocation("quantum/" + resource.getMod()
+		                                                                                          .getName(), resource.getPath()) : TextureMap.field_174945_f;
+
+		if (areTexturesResident(block))
+			Sprites.set(location, new QSprite(block.getName(), block.getModel()
+			                                                        .getTextures()));
 		// register block states to models
 		Vanilla.Block.MODEL_MANAGER.getBlockModelShapes()
 		                           .func_178121_a((net.minecraft.block.Block) blockRegistry
@@ -222,6 +230,57 @@ public final class Quantum {
 						                                                                                                 .func_178439_a('_' + block.getID())
 						                                                                                                 .build());
 	}
+
+	/**
+	 * Checks whether the given block's model contains textures. Has a
+	 * fail-fast
+	 * behavior.
+	 * <p>
+	 * This is used by {@link #registerBlockModel(Block)} to determine if a
+	 * block's model has any textures or not. This is so that models with no
+	 * textures simply reference "missingno" resource location. Going further,
+	 * if some textures are resident, then QSprite adds the "missingno" texture
+	 * data itself for each frame that is present. TODO if a texture is
+	 * missing,
+	 * Quantum warns about this, whether from QSprite or from
+	 * registerBlockModel.
+	 * </p>
+	 *
+	 * @param block
+	 * 		the block to check
+	 *
+	 * @return true if some or all textures are resident, false if no textures
+	 * are resident
+	 */
+	private static boolean areTexturesResident(Block block) {
+		BlockModel model = block.getModel();
+		// there is no model, therefore no textures
+		// for Quantum Source
+		// assert model != null : "[Quantum] Quantum has detected a null model for block \" + block.getName() + \"";
+		if (model == null) return false;
+		// texture array is null somehow, therefore no textures exist
+		Texture[] textures = model.getTextures();
+		// for Quantum Source
+		// assert textures != null : "[Quantum] Quantum has detected that LinkTheProgrammer dun goof'd, or someone broke the terms & conditions: BlockModel should not return a null Texture array!";
+		if (textures == null) return false;
+		// TODO warn that texture array is null (this should never happen)
+
+		// check which textures are null
+
+		// the number of null textures
+		int nullCount = 0;
+		for (Texture texture : textures) {
+			if (texture == null) {
+				nullCount++;
+			}
+		}
+
+		// if no textures are null
+		// if not all textures are null
+		return nullCount <= 0 || nullCount < textures.length;
+
+	}
+
 
 	private void unregisterBlockModel(Block block) {
 		// unregister block model

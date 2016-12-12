@@ -31,11 +31,9 @@ import com.sun.tools.attach.AgentInitializationException;
 import com.sun.tools.attach.AgentLoadException;
 import com.sun.tools.attach.AttachNotSupportedException;
 import com.sun.tools.attach.VirtualMachine;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.texture.TextureMap;
-import quantum.Quantum;
-import quantum.wrapper.bootstrap.CMMinecraft;
-import quantum.wrapper.bootstrap.CMTextureMap;
+import quantum.bootstrap.cm.CMLocale;
+import quantum.bootstrap.cm.CMMinecraft;
+import quantum.bootstrap.cm.CMTextureMap;
 
 import java.io.IOException;
 import java.lang.instrument.Instrumentation;
@@ -43,6 +41,7 @@ import java.lang.management.ManagementFactory;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.jar.JarFile;
 
 /**
  * @author link
@@ -52,25 +51,33 @@ public enum Bootstrap {
 
 	public static void premain(String args, Instrumentation ins) throws ClassNotFoundException {
 		System.out.println("[Bootstrap] Quantum API Java Agent initialized...");
-		System.out.println("[Bootstrap] Modifying classes...");
-		Map<String, ClassModifier> modifiers = new HashMap<>(2);
+		System.out.println("[Bootstrap] Registering class transformers...");
+		Map<String, ClassModifier> modifiers = new HashMap<>(3);
 
-		modifiers.put(Minecraft.class.getName(), new CMMinecraft());
-		modifiers.put(TextureMap.class.getName(), new CMTextureMap());
-		//for Quantum Devel
+		modifiers.put("net/minecraft/client/resources/Locale", new CMLocale());
+		modifiers.put("net/minecraft/client/renderer/texture/TextureMap", new CMTextureMap());
+		modifiers.put("net/minecraft/client/Minecraft", new CMMinecraft());
+
+		//for Quantum Source
 		//modifiers.put("beq", new CMMinecraft());
 		//modifiers.put("byv", new CMTextureMap());
 
 		BootstrapTransformer transformer = new BootstrapTransformer(modifiers);
 
 		ins.addTransformer(transformer, true);
-		System.out.println("[Bootstrap] Done");
-		// add mod jar files to ClassLoader search
-		System.out.println("[Bootstrap] Initializing Quantum...");
-		Quantum.main();
-		System.out.println("[Bootstrap] Successfully initialized Quantum");
+		// Inject Quantum into minecraft class path
+		try {
+			ins.appendToSystemClassLoaderSearch(new JarFile(Paths.get("..", "Quantum API", "quantum.jar")
+			                                                     .toFile(), true));
+			ins.appendToSystemClassLoaderSearch(new JarFile(Paths.get("..", "Quantum API", "quantum_api.jar")
+			                                                     .toFile(), true));
+			ins.appendToSystemClassLoaderSearch(new JarFile(Paths.get("..", "Quantum API", "quantum_wrapper.jar")
+			                                                     .toFile(), true));
+		} catch (IOException e) {
+			System.err.println("[Bootstrap] Missing API jar file or dependencies; Quantum will not be initialized");
+		}
 
-
+		System.out.println("[Bootstrap] Initializing Minecraft...");
 	}
 
 	public static void agentmain(String args, Instrumentation ins) throws ClassNotFoundException {
@@ -84,7 +91,7 @@ public enum Bootstrap {
 		                              .getName()
 		                              .split("@")[0];
 		vm = VirtualMachine.attach(pid);
-		vm.loadAgent(Paths.get(Quantum.getMinecraftDir() + "/quantum/quantum_agent.jar")
+		vm.loadAgent(Paths.get("..", "Quantum API", "quantum_agent.jar")
 		                  .toString(), "");
 		vm.detach();
 	}

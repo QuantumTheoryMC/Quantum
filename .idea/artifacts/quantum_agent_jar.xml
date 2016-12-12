@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="quantum_agent:jar">
+    <output-path>$PROJECT_DIR$/</output-path>
+    <root id="archive" name="quantum_agent.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/quantum/bootstrap/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

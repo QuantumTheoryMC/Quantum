@@ -25,12 +25,11 @@
  *
  * This file is part of Quantum API
  */
-package quantum.wrapper.bootstrap;
+package quantum.bootstrap.cm;
 
 import javassist.CannotCompileException;
 import javassist.CtClass;
 import javassist.NotFoundException;
-import net.minecraft.client.renderer.texture.TextureMap;
 import quantum.bootstrap.ClassModifier;
 
 /**
@@ -42,7 +41,7 @@ public final class CMTextureMap implements ClassModifier {
 
 	@Override
 	public void modify(String className, CtClass modify) {
-		if (className.equals(TextureMap.class.getName())) {
+		if (className.equals("net/minecraft/client/renderer/texture/TextureMap")) {
 			try {
 				// replace func_174942_a
 				modify.getDeclaredMethod("func_174942_a")

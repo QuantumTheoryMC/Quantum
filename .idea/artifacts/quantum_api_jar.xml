@@ -2,42 +2,20 @@
   <artifact type="jar" build-on-make="true" name="quantum_api:jar">
     <output-path>$PROJECT_DIR$</output-path>
     <root id="archive" name="quantum_api.jar">
-      <element id="archive" name="Quantum API.jar">
-        <element id="module-output" name="Quantum API" />
-        <element id="dir-copy" path="$PROJECT_DIR$/../Minecraft/out/production/Minecraft" />
-      </element>
       <element id="library" level="application" name="Javassist" />
-      <element id="file-copy" path="$APPLICATION_HOME_DIR$/redist/annotations-java8.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/com/ibm/icu/icu4j-core-mojang/51/icu4j-core-mojang-51.2.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/java3d/vecmath/1.5/vecmath-1.5.2.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/net/sf/trove4j/trove4j/3.0/trove4j-3.0.3.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/net/java/jutils/jutils/1.0/jutils-1.0.0.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/org/apache/commons/commons-lang3/3.3/commons-lang3-3.3.2.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/net/java/jinput/jinput/2.0/jinput-2.0.5.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/com/google/guava/guava/17/guava-17.0.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/net/sf/jopt-simple/jopt-simple/4/jopt-simple-4.6.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/org/apache/httpcomponents/httpcore/4.3/httpcore-4.3.2.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/org/apache/httpcomponents/httpclient/4.3/httpclient-4.3.3.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/com/paulscode/soundsystem/20120107/soundsystem-20120107.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/com/mojang/realms/1.6/realms-1.6.1.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/com/google/code/gson/gson/2.2/gson-2.2.4.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/org/apache/commons/commons-compress/1.8/commons-compress-1.8.1.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/commons-codec/commons-codec/1/commons-codec-1.9.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/commons-io/commons-io/2/commons-io-2.4.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/com/mojang/authlib/1.5/authlib-1.5.21.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/commons-logging/commons-logging/1.1/commons-logging-1.1.3.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/io/netty/netty-all/4.0.15/netty-all-4.0.15.Final.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/com/paulscode/codecwav/20101023/codecwav-20101023.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/com/paulscode/codecjorbis/20101023/codecjorbis-20101023.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/org/apache/logging/log4j/log4j-api/2/log4j-api-2.0-beta9.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/org/apache/logging/log4j/log4j-core/2/log4j-core-2.0-beta9.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/org/lwjgl/lwjgl/lwjgl_util/2.9/lwjgl_util-2.9.1.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/org/lwjgl/lwjgl/lwjgl/2.9/lwjgl-2.9.1.jar" />
-      <element id="file-copy" path="$PROJECT_DIR$/../Minecraft/lib/Minecraft/libraries/tv/twitch/twitch/6/twitch-6.5.jar" />
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/src/quantum/api/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="directory" name="quantum">
+        <element id="directory" name="api">
+          <element id="dir-copy" path="$PROJECT_DIR$/out/production/Quantum API/quantum/api" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/out/production/Quantum API/quantum/Blocks.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/out/production/Quantum API/quantum/Quantum$Vanilla$Block.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/out/production/Quantum API/quantum/Quantum$Vanilla$Entity.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/out/production/Quantum API/quantum/Quantum$Vanilla.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/out/production/Quantum API/quantum/Quantum$Version.class" />
+        <element id="file-copy" path="$PROJECT_DIR$/out/production/Quantum API/quantum/Quantum.class" />
       </element>
     </root>
   </artifact>

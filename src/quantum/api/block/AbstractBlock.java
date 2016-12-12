@@ -32,9 +32,8 @@ import quantum.api.block.model.BlockModel;
 import quantum.api.item.Item;
 import quantum.mod.Mod;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * A skeletal implementation of the Block interface.
@@ -65,8 +64,7 @@ public abstract class AbstractBlock implements Block {
 		this.namespace = mod.getName();
 		this.variantName = variantName == null || variantName.length() == 0 ? name : variantName;
 		this.variants = variants;
-		this.variantList = Arrays.asList((Block[]) variants.entrySet()
-		                                                   .toArray());
+		this.variantList = toList(variants);
 		this.mod = mod;
 		this.states = states;
 		this.type = type;
@@ -74,6 +72,18 @@ public abstract class AbstractBlock implements Block {
 		this.harvestTool = harvestTool;
 		this.drop = drop;
 		this.variantIndex = variantIndex;
+	}
+
+	protected static List<Block> toList(Map<String, Block> variants) {
+		if (variants == null) return Collections.emptyList();
+
+		Set<Map.Entry<String, Block>> entries = variants.entrySet();
+		List<Block> blocks = new ArrayList<>(entries.size());
+
+		blocks.addAll(entries.stream()
+		                     .map(Map.Entry::getValue)
+		                     .collect(Collectors.toList()));
+		return blocks;
 	}
 
 

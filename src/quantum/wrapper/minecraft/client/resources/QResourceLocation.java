@@ -21,28 +21,20 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 11/19/16 at 9:12 PM.
+ * Created file on 12/12/16 at 2:51 PM.
  *
  * This file is part of Quantum API
  */
-package quantum.runtime;
+package quantum.wrapper.minecraft.client.resources;
 
-import quantum.api.entity.player.PlayerEntity;
+import net.minecraft.util.ResourceLocation;
 
 /**
- * A Ticker object
- *
  * @author link
  */
-@FunctionalInterface
-public interface Tickable {
+public class QResourceLocation extends ResourceLocation {
 
-	/**
-	 * Runs this Tickable with the player instance for the local client.
-	 *
-	 * @param player
-	 * 		the player for this client
-	 */
-	void tick(PlayerEntity player);
-
+	public QResourceLocation(String domain, String path) {
+		super(/* ignored */0, domain, path);
+	}
 }

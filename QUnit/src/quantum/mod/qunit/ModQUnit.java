@@ -49,7 +49,7 @@ public final class ModQUnit implements Mod {
 	public void load(Quantum quantum) {
 
 		quantum.define(new BlockBuilder().name("testBlock")
-		                                 .id("test_block")
+		                                 .id("test_block").mod(this)
 		                                 .model(new CustomModel())
 		                                 .variant("textBlock")
 		                                 .type(new Block.Type(Collections.emptyList()))
@@ -123,11 +123,13 @@ public final class ModQUnit implements Mod {
 
 	@Override
 	public void unload(Quantum quantum) {
+		System.out.println("[QUnit] Mod.unload(Quantum)...pass");
+		System.out.println("[QUnit] Summary:");
 	}
 
 	@Override
 	public String getName() {
-		return null;
+		return "QUnit";
 	}
 
 }

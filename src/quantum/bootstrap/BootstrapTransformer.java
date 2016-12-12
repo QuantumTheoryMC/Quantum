@@ -27,17 +27,13 @@
  */
 package quantum.bootstrap;
 
-import javassist.CannotCompileException;
-import javassist.ClassPool;
-import javassist.CtClass;
+import javassist.*;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.lang.instrument.IllegalClassFormatException;
 import java.security.ProtectionDomain;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Stream;
 
 /**
  * @author link
@@ -45,6 +41,7 @@ import java.util.stream.Stream;
 class BootstrapTransformer implements java.lang.instrument.ClassFileTransformer {
 
 	private final Map<String, ClassModifier> modifiers;
+	private static final ClassPool CLASS_POOL = ClassPool.getDefault();
 
 	BootstrapTransformer() {
 		this.modifiers = new HashMap<>();
@@ -65,19 +62,24 @@ class BootstrapTransformer implements java.lang.instrument.ClassFileTransformer 
 	@Override
 	public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protection, byte[] classFile) throws IllegalClassFormatException {
 
-		if (classFile == null || className == null) return null;
-
+		if (classFile == null) return null;
+		// the modifier for className
 		ClassModifier modifier = modifiers.get(className);
 
 		if (modifier == null) return null;
-
+		System.out.println("[Bootstrap][Transformer] Modifying class: " + className);
 		try {
-			ClassPool cp = ClassPool.getDefault();
-			CtClass ct = cp.makeClass((InputStream) Stream.of(classFile));
+			// fully qualified name of the current class
+			String qualifiedName = className.replace('/', '.');
+			CLASS_POOL.appendClassPath(new ByteArrayClassPath(qualifiedName, classFile));
+			CtClass ct = CLASS_POOL.get(qualifiedName);
+
+			// if we are retransforming
+			if (ct.isFrozen()) ct.defrost();
+
 			modifier.modify(className, ct);
 			return ct.toBytecode();
-		} catch (IOException | CannotCompileException e) {
-			//ignore
+		} catch (IOException | CannotCompileException | NotFoundException e) {
 			return null;
 		}
 
