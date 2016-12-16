@@ -31,44 +31,60 @@ import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import quantum.api.block.Block;
+import quantum.util.Property;
 
-import java.util.Collection;
+import java.util.*;
 
 /**
  * @author link
  */
 public class StateAdapter implements IBlockState {
 
+	private final Block.State state;
+
 	public StateAdapter(Block.State state) {
+		this.state = state;
 	}
 
 	@Override
 	public Collection<IProperty> getPropertyNames() {
-		return null;
+		Set<IProperty> properties = new HashSet<>(state.getProperties().size());
+
+		for (Property<?> property : state.getProperties()) {
+			properties.add(StateAccessor.convert(property));
+		}
+		return properties;
 	}
 
 	@Override
 	public Comparable<?> getValue(IProperty property) {
-		return null;
+		return (Comparable<?>) StateAccessor.convert(state.getProperty(property.getName()));
 	}
 
 	@Override
 	public IBlockState withProperty(IProperty property, Comparable value) {
-		return null;
+		state.setProperty(property.getName(), value);
+		return this;
 	}
 
 	@Override
 	public IBlockState cycleProperty(IProperty property) {
-		return null;
+		return new StateAdapter(state.next());
 	}
 
 	@Override
 	public ImmutableMap<String, IProperty> getProperties() {
-		return null;
+		Map<String, IProperty> properties = new HashMap<>(state.getProperties().size());
+
+		for (Property<?> property : state.getProperties()) {
+			properties.put(property.getName(), StateAccessor.convert(property));
+		}
+
+		return ImmutableMap.copyOf(properties);
 	}
 
 	@Override
 	public net.minecraft.block.Block getBlock() {
-		return null;
+		return BlockAdapter.adapt((Block) state.getProperty("block"));
 	}
 }

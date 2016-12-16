@@ -21,40 +21,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 7/18/16 at 10:39 AM.
+ * Created file on 12/13/16 at 7:42 PM.
  *
  * This file is part of Quantum API
  */
-package quantum.wrapper.minecraft.block;
+package quantum.wrapper.minecraft.client.resources;
 
-import quantum.api.block.Block;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.block.statemap.StateMapperBase;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.function.Function;
 
 /**
  * @author link
  */
-public class BlockAdapter extends net.minecraft.block.Block {
+public class CustomStateMap extends StateMapperBase {
 
-	private static final Map<net.minecraft.block.Block, Block> BLOCK_TO_BLOCK = new HashMap<>(blockRegistry
-			                                                                                          .getKeys()
-			                                                                                          .size(), 0.88f);
+	private final Function<IBlockState, ModelResourceLocation> getResource;
 
-	private BlockAdapter(Block block) {
-		super(new TypeAdapter(block));
+	public CustomStateMap(Function<IBlockState, ModelResourceLocation> getResource) {
+		this.getResource = getResource;
 	}
 
-	public static net.minecraft.block.Block adapt(Block block) {
-		// TODO implement per-mod BlockAdapters
-		return new BlockAdapter(block);
-	}
-
-	public static Block get(net.minecraft.block.Block block) {
-		return BLOCK_TO_BLOCK.get(block);
-	}
-
-	public static void set(net.minecraft.block.Block key, Block value) {
-		BLOCK_TO_BLOCK.put(key, value);
+	// getModelResourceLocation(IBlockState)
+	@Override
+	protected ModelResourceLocation func_178132_a(IBlockState state) {
+		return getResource.apply(state);
 	}
 }

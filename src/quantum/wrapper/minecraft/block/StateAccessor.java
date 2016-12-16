@@ -27,19 +27,25 @@
  */
 package quantum.wrapper.minecraft.block;
 
+import com.google.common.collect.ImmutableList;
 import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import quantum.api.block.Block;
+import quantum.api.block.BlockProperty;
 import quantum.util.Property;
+import quantum.util.list.LogicalSet;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * @author link
  */
 public class StateAccessor implements Block.State {
 
-	private       int                      index;
+	private int index, next;
 	private final List<Block.State>        states;
 	private final Map<String, Property<?>> properties;
 
@@ -59,44 +65,50 @@ public class StateAccessor implements Block.State {
 	}
 
 	protected static List<Block.State> states(IBlockState blockState) {
-		List<Block.State> states = new ArrayList<>(blockState.getProperties()
-		                                                     .size());
-		Map<String, Property<?>> properties = new HashMap<>(states.size());
-		IProperty[] props = (IProperty[]) blockState.getProperties()
-		                                            .values()
-		                                            .toArray();
+		// TODO optimize
+		if (!(blockState instanceof BlockState)) {
 
-		int counter = 0;
+			List<Block.State> states = new ArrayList<>(blockState.getProperties().size());
 
-		StateAccessor current = new StateAccessor(counter, states, properties);
-		for (int i = 0; i < states.size(); i++) {
-			states.add(i, current);
-			for (IProperty prop : props) {
-				current.properties.put(prop.getName(), convert(prop));
+			Map<String, Property<?>> properties = new HashMap<>(states.size());
+
+			IProperty[] props = (IProperty[]) blockState.getProperties().values().toArray();
+
+			int counter = 0;
+
+			StateAccessor current = new StateAccessor(counter, states, properties);
+			for (int i = 0; i < states.size(); i++) {
+				states.add(i, current);
+				for (IProperty prop : props) {
+					current.properties.put(prop.getName(), convert(prop, blockState));
+				}
+				current = new StateAccessor(i + 1, states, current.properties);
 			}
-			current = new StateAccessor(i + 1, states, current.properties);
+
+			return states;
 		}
 
-		return states;
+		@SuppressWarnings("unchecked") ImmutableList<IBlockState> blockStates = blockState instanceof BlockState ? ((BlockState) blockState).getValidStates() : null;
+		List<Block.State> states = new ArrayList<>(blockStates.size());
 
+		states.addAll(blockStates.stream().map(StateAccessor::new).collect(Collectors.toList()));
+
+		return states;
 	}
 
 	protected static Map<String, Property<?>> properties(IBlockState state) {
-		Map<String, Property<?>> result = new HashMap<>(state.getProperties()
-		                                                     .size(), 0.0f);
-		List<IProperty> props = Arrays.asList((IProperty[]) state.getProperties()
-		                                                         .values()
-		                                                         .toArray());
+		Map<String, Property<?>> result = new HashMap<>(state.getProperties().size(), 0.0f);
+		List<IProperty> props = Arrays.asList((IProperty[]) state.getProperties().values().toArray());
 
 		props.forEach((prop) -> {
-			Property<?> p = convert(prop);
+			Property<?> p = convert(prop, state);
 			result.put(p.getName(), p);
 		});
 
 		return result;
 	}
 
-	static <V> Property<V> convert(IProperty prop) {
+	static <V> Property<V> convert(IProperty prop, IBlockState state) {
 		return new Property<V>() {
 			@Override
 			public String getName() {
@@ -104,15 +116,40 @@ public class StateAccessor implements Block.State {
 			}
 
 			@Override
+			@SuppressWarnings("unchecked")
 			public V getValue() {
-				return null;
+				return (V) state.getValue(prop);
+			}
+		};
+	}
+
+	static <V> IProperty convert(Property<V> prop) {
+		return new IProperty() {
+			@Override
+			public String getName() {
+				return prop.getName();
+			}
+
+			@Override
+			public Collection<?> getAllowedValues() {
+				return new LogicalSet<>((object) -> object.getClass() == getValueClass());
+			}
+
+			@Override
+			public Class<?> getValueClass() {
+				return prop.getType();
+			}
+
+			@Override
+			public String getName(Comparable value) {
+				return value.toString();
 			}
 		};
 	}
 
 	@Override
 	public int getIndex() {
-		return 0;
+		return index;
 	}
 
 	@Override
@@ -122,12 +159,28 @@ public class StateAccessor implements Block.State {
 	}
 
 	@Override
+	public <V> void setProperty(String name, V value) {
+		Property<V> property = new BlockProperty<>(name, value);
+		properties.put(name, property);
+	}
+
+	@Override
+	public List<Property<?>> getProperties() {
+		Set<Map.Entry<String, Property<?>>> entries = this.properties.entrySet();
+		List<Property<?>> properties = new ArrayList<>(entries.size());
+
+
+		properties.addAll(entries.stream().map((Function<Map.Entry<String, Property<?>>, Property<?>>) Map.Entry::getValue).collect(Collectors.toList()));
+		return properties;
+	}
+
+	@Override
 	public List<Block.State> getStates() {
 		return states;
 	}
 
 	@Override
 	public Block.State next() {
-		return states.get(index++ >= states.size() ? index = 0 : index);
+		return states.get(next++ >= states.size() ? next = 0 : next);
 	}
 }

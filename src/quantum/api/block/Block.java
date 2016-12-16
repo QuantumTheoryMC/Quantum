@@ -331,6 +331,16 @@ public interface Block extends MinecraftObject, Serializable {
 		 */
 		<T> Property<T> getProperty(String property);
 
+		<V> void setProperty(String name, V value);
+
+		/**
+		 * Gets all the properties contained by this Block.State with their
+		 * current values.
+		 *
+		 * @return all properties contained by this Block.State in a List
+		 */
+		List<Property<?>> getProperties();
+
 		/**
 		 * Gets the list of possible states for this state, or if this is the
 		 * only possible state, this state is returned as a List.
@@ -394,7 +404,8 @@ public interface Block extends MinecraftObject, Serializable {
 		/**
 		 * removes the Type with the given name
 		 *
-		 * @param name the name of the Block.Type
+		 * @param name
+		 * 		the name of the Block.Type
 		 */
 		public static void remove(String name) {
 			TYPES.remove(name);
