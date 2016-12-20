@@ -85,6 +85,6 @@ public class StateAdapter implements IBlockState {
 
 	@Override
 	public net.minecraft.block.Block getBlock() {
-		return BlockAdapter.adapt((Block) state.getProperty("block"));
+		return BlockAdapter.adapt((Block) state.getProperty("block").getValue());
 	}
 }

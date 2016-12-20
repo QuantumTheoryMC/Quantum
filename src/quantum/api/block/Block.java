@@ -331,7 +331,7 @@ public interface Block extends MinecraftObject, Serializable {
 		 */
 		<T> Property<T> getProperty(String property);
 
-		<V> void setProperty(String name, V value);
+		<V> State setProperty(String name, V value);
 
 		/**
 		 * Gets all the properties contained by this Block.State with their

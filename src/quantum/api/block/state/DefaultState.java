@@ -21,33 +21,40 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 11/5/16 at 7:11 PM.
+ * Created file on 12/17/16 at 1:42 PM.
  *
  * This file is part of Quantum API
  */
-package quantum.wrapper.minecraft.tileentity;
+package quantum.api.block.state;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
 import quantum.api.block.Block;
-import quantum.api.world.BlockEntity;
-import quantum.wrapper.minecraft.block.BlockAdapter;
+import quantum.api.block.BlockProperty;
+import quantum.util.Property;
+import quantum.util.pair.Pair;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author link
  */
-public class TileEntityAdapter extends TileEntity {
+public class DefaultState extends AbstractState {
 
-	public TileEntityAdapter(BlockEntity blockEntity) {
-		this(new BlockPos(blockEntity.getX(), blockEntity.getY(), blockEntity.getZ()), blockEntity
-				                                                                               .getBlock());
+	@SafeVarargs
+	public DefaultState(Pair<String, Object>... properties) {
+		super(properties);
 	}
 
-	public TileEntityAdapter(BlockPos pos, Block block) {
-		this.blockType = BlockAdapter.adapt(block);
-		this.pos = pos;
-		this.worldObj = Minecraft.getMinecraft().theWorld;
+	protected DefaultState(int index, Map<String, Property<?>> properties, List<Block.State> states) {
+		super(index, properties, states);
+	}
+
+	@Override
+	public <V> DefaultState setProperty(String name, V value) {
+		Map<String, Property<?>> props = new HashMap<>(properties);
+		props.put(name, new BlockProperty<>(name, value));
+		return new DefaultState(index, props, states);
 	}
 
 }

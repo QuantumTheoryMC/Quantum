@@ -66,7 +66,7 @@ public final class WorldAccessor implements World {
 
 	@Override
 	public void setBlock(int x, int y, int z, Block block) {
-		world.setBlockState(new BlockPos(x, y, z), new BlockAdapter(block).getDefaultState());
+		world.setBlockState(new BlockPos(x, y, z), BlockAdapter.adapt(block).getDefaultState());
 	}
 
 	@Override

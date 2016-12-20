@@ -33,7 +33,9 @@ import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.resources.model.ModelManager;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityList;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 import quantum.api.block.Block;
 import quantum.api.block.model.BlockModel;
@@ -50,7 +52,9 @@ import quantum.wrapper.entity.EntityAdapter;
 import quantum.wrapper.minecraft.Sprites;
 import quantum.wrapper.minecraft.block.BlockAdapter;
 import quantum.wrapper.minecraft.block.StateAdapter;
+import quantum.wrapper.minecraft.client.resources.CustomStateMap;
 import quantum.wrapper.minecraft.client.resources.QResourceLocation;
+import quantum.wrapper.minecraft.item.Items;
 import quantum.wrapper.minecraft.sprite.QSprite;
 
 import java.io.IOException;
@@ -97,7 +101,7 @@ public final class Quantum {
 	/**
 	 * The mangled list of Vanilla and Modded Items adapted to Quantum API
 	 */
-	private static final Map<String, Item> ITEMS = new HashMap<>(Vanilla.ITEM_COUNT, 0.33f);
+	private static final Map<String, Item> ITEMS = new HashMap<>(Vanilla.Item.ITEM_COUNT, 0.33f);
 
 	/**
 	 * The mangled list of Vanilla and Modded Dimensions adapted to Quantum API
@@ -145,7 +149,10 @@ public final class Quantum {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
-			System.err.println("[Quantum] An Exception was thrown during initialization");
+			System.err.println("[Quantum] An Exception was thrown during initialization: " + e.getLocalizedMessage());
+			e.printStackTrace();
+		} catch (Error e) {
+			System.err.println("[Quantum] An Error was thrown during initialization: " + e.getLocalizedMessage());
 			e.printStackTrace();
 		}
 		else System.out.println("[Quantum]     No mods found...");
@@ -182,12 +189,13 @@ public final class Quantum {
 	public void define(Block block) {
 		if (enabled) {
 			// register the block
-			BlockAdapter adapter = new BlockAdapter(block);
-			blockRegistry.register(Vanilla.blockIDCounter++, block.getID(), adapter);
+			BlockAdapter adapter = BlockAdapter.adapt(block);
+			Vanilla.blockIDCounter++;
+			blockRegistry.register(Vanilla.blockIDCounter, new QResourceLocation(block.getMod(), block.getID(), false), adapter);
 			// register the Model held by the Block
 			registerBlockModel(block);
 			// register the block with Quantum
-			BLOCKS.put(block.getID(), block);
+			BLOCKS.put(block.getMod().getName().toLowerCase() + ":" + block.getID(), block);
 			BlockAdapter.set(adapter, block);
 		}
 	}
@@ -196,7 +204,7 @@ public final class Quantum {
 	 * Redefines a block implemented by minecraft.
 	 * <p>
 	 * This method overwrites the block corresponding to this implementation,
-	 * and updates the QUantum API internal list.
+	 * and updates the Quantum API internal list.
 	 * </p>
 	 *
 	 * @param block
@@ -205,7 +213,7 @@ public final class Quantum {
 	public void redefine(Block block) {
 		if (enabled) {
 			// force the block definition by using putObject instead of register
-			blockRegistry.putObject(block.getID(), new BlockAdapter(block));
+			blockRegistry.putObject(new QResourceLocation(block.getMod(), block.getID(), false), BlockAdapter.adapt(block));
 			// register the Model held by the Block
 			registerBlockModel(block);
 			// register the block with Quantum
@@ -216,22 +224,20 @@ public final class Quantum {
 	private void registerBlockModel(Block block) {
 		// register default state block model
 		Resource resource = block.getModel().getResource();
-		ResourceLocation location = resource != null ? new QResourceLocation("quantum/" + resource.getMod()
-		                                                                                          .getName(), resource.getPath()) : TextureMap.field_174945_f;
+		ResourceLocation location = resource != null ? new QResourceLocation(resource.getMod(), resource.getPath(), false) : TextureMap.field_174945_f;
 
 		if (areTexturesResident(block))
-			Sprites.set(location, new QSprite(block.getName(), block.getModel()
-			                                                        .getTextures()));
+			Sprites.set(location, new QSprite(block.getName(), block.getModel().getTextures()));
 		// register block states to models
-		Vanilla.Block.MODEL_MANAGER.getBlockModelShapes()
-		                           .func_178121_a((net.minecraft.block.Block) blockRegistry
-				                                                                      .getObject(block.getID()), new StateMap.Builder()
-						                                                                                                 .func_178442_a((IProperty[]) new StateAdapter(block.getDefaultState())
-								                                                                                                                              .getProperties()
-								                                                                                                                              .values()
-								                                                                                                                              .toArray())
-						                                                                                                 .func_178439_a('_' + block.getID())
-						                                                                                                 .build());
+		Vanilla.Block.MODEL_MANAGER.getBlockModelShapes().func_178121_a((net.minecraft.block.Block) blockRegistry.getObject(new ResourceLocation(block.getMod().getName().toLowerCase(), block.getID())), block.getDefaultState() == null ? new CustomStateMap((state) -> new ModelResourceLocation(block.getMod().getName().toLowerCase() + ":" + block.getID(), null)) : new StateMap.Builder().func_178442_a(extract(block)).func_178439_a('_' + block.getID()).build());
+		// register block item to the item map (does not increment item ID Counter)
+		net.minecraft.block.Block b = (net.minecraft.block.Block) blockRegistry.getObjectById(Vanilla.blockIDCounter);
+		b.setCreativeTab(CreativeTabs.tabBlock);
+		Items.registerBlockItem(b, new ItemBlock(b));
+	}
+
+	private static IProperty[] extract(Block block) {
+		return new ArrayList<>(new StateAdapter(block.getDefaultState()).getProperties().values()).toArray(new IProperty[0]);
 	}
 
 	/**
@@ -261,7 +267,6 @@ public final class Quantum {
 		// for Quantum Source
 		// assert model != null : "[Quantum] Quantum has detected a null model for block \" + block.getName() + \"";
 		if (model == null) return false;
-		// texture array is null somehow, therefore no textures exist
 		Texture[] textures = model.getTextures();
 		// for Quantum Source
 		// assert textures != null : "[Quantum] Quantum has detected that LinkTheProgrammer dun goof'd, or someone broke the terms & conditions: BlockModel should not return a null Texture array!";
@@ -287,14 +292,10 @@ public final class Quantum {
 
 	private void unregisterBlockModel(Block block) {
 		// unregister block model
-		Sprites.set(new ModelResourceLocation(block.getModel()
-		                                           .getResource()
-		                                           .getPath(), block.getName()), null);
+		Sprites.set(new ModelResourceLocation(block.getModel().getResource().getPath(), block.getName()), null);
 		// unregister block states to models
 		// TODO test this
-		Vanilla.Block.MODEL_MANAGER.getBlockModelShapes()
-		                           .func_178121_a((net.minecraft.block.Block) blockRegistry
-				                                                                      .getObject(block.getID()), null);
+		Vanilla.Block.MODEL_MANAGER.getBlockModelShapes().func_178121_a((net.minecraft.block.Block) blockRegistry.getObject(block.getID()), null);
 	}
 
 	/**
@@ -428,8 +429,7 @@ public final class Quantum {
 	 * @return the "formal" name of the Quantum environment
 	 */
 	public static String getFormalName() {
-		return "[" + Version.getName()
-		                    .toLowerCase() + "_(API:" + getAPIVersion() + ")_(W:" + getWrapperVersion() + ")_(MC:" + getMinecraftVersion() + ")]";
+		return "[" + Version.getName().toLowerCase() + "_(API:" + getAPIVersion() + ")_(W:" + getWrapperVersion() + ")_(MC:" + getMinecraftVersion() + ")]";
 	}
 
 	/**
@@ -594,15 +594,19 @@ public final class Quantum {
 			}
 		}
 
-		static final int BLOCK_COUNT     = blockRegistry.getKeys()
-		                                                .size(); // list of blocks
+
+		enum Item {
+			;
+			static final    int ITEM_COUNT    = itemRegistry.getKeys().size(); // list of items
+			static volatile int itemIDCounter = ITEM_COUNT;
+		}
+
+		static final int BLOCK_COUNT     = blockRegistry.getKeys().size(); // list of blocks
 		static final int ENTITY_COUNT    = 77; // list of entities
-		static final int ITEM_COUNT      = itemRegistry.getKeys()
-		                                               .size(); // list of items
 		static final int DIMENSION_COUNT = 3; // Overworld, End, Nether
 
-		static volatile int blockIDCounter     = BLOCK_COUNT;
-		static volatile int itemIDCounter      = ITEM_COUNT;
+		static volatile int blockIDCounter = BLOCK_COUNT;
+
 		static volatile int entityIDCounter    = ENTITY_COUNT;
 		static volatile int dimensionIDCounter = DIMENSION_COUNT;
 	}

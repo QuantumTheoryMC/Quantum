@@ -43,9 +43,12 @@ public class BlockAdapter extends net.minecraft.block.Block {
 
 	private BlockAdapter(Block block) {
 		super(new TypeAdapter(block));
+		setDefaultState(new StateAdapter(block.getDefaultState()));
+		setUnlocalizedName(block.getName());
+
 	}
 
-	public static net.minecraft.block.Block adapt(Block block) {
+	public static BlockAdapter adapt(Block block) {
 		// TODO implement per-mod BlockAdapters
 		return new BlockAdapter(block);
 	}

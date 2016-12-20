@@ -31,14 +31,12 @@ package quantum.mod.qunit;
 import quantum.Blocks;
 import quantum.Quantum;
 import quantum.api.block.Block;
-import quantum.api.block.BlockBuilder;
 import quantum.mod.Mod;
-import quantum.mod.qunit.model.CustomModel;
+import quantum.mod.qunit.block.TestBlock;
 import quantum.model.Model;
 
 import java.io.PrintStream;
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * @author link
@@ -47,18 +45,7 @@ public final class ModQUnit implements Mod {
 
 	@Override
 	public void load(Quantum quantum) {
-
-		quantum.define(new BlockBuilder().name("testBlock")
-		                                 .id("test_block")
-		                                 .mod(this)
-		                                 .model(new CustomModel())
-		                                 .variant("textBlock")
-		                                 .type(new Block.Type(Collections.emptyList()))
-		                                 .variantIndex(0)
-		                                 .variants(Collections.emptyMap())
-		                                 .drops(null) // TODO
-		                                 .states(Collections.emptyList())
-		                                 .build());
+		quantum.define(new TestBlock("testBlock", "test_block", this));
 		run(quantum);
 	}
 
@@ -69,10 +56,10 @@ public final class ModQUnit implements Mod {
 		Block block;
 		try {
 			out.println("[QUnit] Begin Section \"Blocks\"");
-			block = Blocks.get("test_block");
+			block = Blocks.get("quantum:qunit:test_block");
 			out.println("\t[QUnit] quantum.api.block.Blocks.get(String)...pass");
 		} catch (Exception e) {
-			err.println("[QUnit] Blocks.get(String)...fail");
+			err.println("[QUnit] quantum.api.block.Blocks.get(String)...fail");
 			err.println("[QUnit] Stacktrace:");
 			e.printStackTrace();
 			block = null;
@@ -89,19 +76,6 @@ public final class ModQUnit implements Mod {
 			}
 
 			try {
-				out.println("[QUnit] Testing BlockBuilder...");
-				block = new BlockBuilder().name("custom_block")
-				                          .mod(this)
-				                          .model(null) // TODO
-				                          .states(null) // TODO
-				                          .harvestTool(null) // TODO
-				                          .type(null) // TODO
-				                          .drops(null) // TODO
-				                          .variant("custom_block")
-				                          .variantIndex(0)
-				                          .variants(null) // TODO
-				                          .build();
-				quantum.define(block);
 				Model model = block.getModel();
 				out.println("\t[QUnit] quantum.model.Model.getColor(): \"" + model.getColor() + "\"");
 				out.println("\t[QUnit] quantum.model.Model.getWidth(): \"" + model.getWidth() + "\"");
@@ -114,6 +88,13 @@ public final class ModQUnit implements Mod {
 				err.println("[QUnit] Stacktrace:");
 				e.printStackTrace();
 			}
+
+			// TODO
+//			try {
+//				//Block.State state = block.getDefaultState();
+//			} catch(Exception e) {
+//
+//			}
 
 		} else {
 			err.println("[QUnit] Section \"Blocks\" failed at initialization");

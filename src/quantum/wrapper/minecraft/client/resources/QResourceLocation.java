@@ -28,13 +28,52 @@
 package quantum.wrapper.minecraft.client.resources;
 
 import net.minecraft.util.ResourceLocation;
+import quantum.mod.Mod;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * @author link
  */
 public class QResourceLocation extends ResourceLocation {
 
-	public QResourceLocation(String domain, String path) {
-		super(/* ignored */0, domain, path);
+	private final Mod     mod;
+	private final boolean jarResource;
+
+	public QResourceLocation(Mod mod, String relativePath, boolean jarResource) {
+		super(/* ignored */0, mod.getName(), relativePath);
+		this.mod = mod;
+		this.jarResource = jarResource;
 	}
+
+	public boolean exists() {
+		InputStream resource = retrieve();
+		try {
+			return resource != null && resource.read() != -1;
+		} catch (IOException e) {
+			return false;
+		}
+	}
+
+	public InputStream retrieve() {
+		try {
+			return jarResource ? mod.getClass().getResourceAsStream(getPath().toString()) : new FileInputStream(getPath().toString());
+		} catch (IOException e) {
+			return null;
+		}
+	}
+
+	public Path getPath() {
+		return !jarResource ? Paths.get(System.getProperty("user.dir"), ".minecraft", "quantum", "mods", mod.getName(), resourcePath) : Paths.get(mod.getName() + ".jar", resourcePath);
+	}
+
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
+
 }

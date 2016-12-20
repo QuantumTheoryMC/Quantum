@@ -21,33 +21,48 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *
- * Created file on 11/5/16 at 7:11 PM.
+ * Created file on 12/16/16 at 8:05 PM.
  *
  * This file is part of Quantum API
  */
-package quantum.wrapper.minecraft.tileentity;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
-import quantum.api.block.Block;
-import quantum.api.world.BlockEntity;
-import quantum.wrapper.minecraft.block.BlockAdapter;
+package quantum.util.pair;
 
 /**
  * @author link
  */
-public class TileEntityAdapter extends TileEntity {
+public interface Pair<A, B> {
 
-	public TileEntityAdapter(BlockEntity blockEntity) {
-		this(new BlockPos(blockEntity.getX(), blockEntity.getY(), blockEntity.getZ()), blockEntity
-				                                                                               .getBlock());
+	/**
+	 * A helper method that creates pairs from an anonymous class instance which
+	 * pairs objects A and B together.
+	 *
+	 * @param a
+	 * 		the first object
+	 * @param b
+	 * 		the second object
+	 * @param <A>
+	 * 		the first Object type
+	 * @param <B>
+	 * 		the second Object type
+	 *
+	 * @return a pair containing the given objects
+	 */
+	static <A, B> Pair<A, B> pair(A a, B b) {
+		return new Pair<A, B>() {
+			@Override
+			public A getA() {
+				return a;
+			}
+
+			@Override
+			public B getB() {
+				return b;
+			}
+		};
 	}
 
-	public TileEntityAdapter(BlockPos pos, Block block) {
-		this.blockType = BlockAdapter.adapt(block);
-		this.pos = pos;
-		this.worldObj = Minecraft.getMinecraft().theWorld;
-	}
+	A getA();
+
+	B getB();
 
 }

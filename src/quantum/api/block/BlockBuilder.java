@@ -108,7 +108,36 @@ public final class BlockBuilder {
 
 	@SuppressWarnings("unchecked")
 	public Block build() {
-		return new AbstractBlock(name, id, variantName, variants, mod, states, type, model, harvestTool, drop, variantIndex) {
+		return new AbstractBlock(name, id, variantName, variantIndex, variants, mod, states, type, model, harvestTool, drop) {
+			@Override
+			protected Map<String, Block> variants() {
+				return null;
+			}
+
+			@Override
+			protected List<State> states() {
+				return null;
+			}
+
+			@Override
+			protected Item harvestTool() {
+				return null;
+			}
+
+			@Override
+			protected Item drop() {
+				return null;
+			}
+
+			@Override
+			protected Type type() {
+				return null;
+			}
+
+			@Override
+			protected BlockModel model() {
+				return null;
+			}
 		};
 	}
 

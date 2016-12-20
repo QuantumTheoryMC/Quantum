@@ -31,14 +31,10 @@ import net.minecraft.client.resources.DefaultResourcePack;
 import net.minecraft.client.resources.IResource;
 import net.minecraft.client.resources.IResourcePack;
 import net.minecraft.util.ResourceLocation;
-import quantum.Quantum;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
@@ -68,7 +64,6 @@ import java.util.Set;
 public final class QuantumExtendedResourcePack extends DefaultResourcePack implements IResourcePack {
 
 	private static final Set<String> DOMAINS  = new HashSet<>(4, 0.9f);
-	private static       int         resource = 0;
 
 	static {
 		DOMAINS.addAll(defaultResourceDomains);
@@ -101,23 +96,13 @@ public final class QuantumExtendedResourcePack extends DefaultResourcePack imple
 	@Override
 	public InputStream getInputStream(ResourceLocation location) throws IOException {
 		// TODO quantum default resources
-		return location.getResourceDomain()
-		               .contains("quantum") ? getStream(location) : super.getInputStream(location);
-	}
-
-	private static InputStream getStream(ResourceLocation location) throws IOException {
-		// debug
-		System.out.println("[ExtResourcePack] resource[" + resource++ + "] domain: " + location.getResourceDomain() + ", path: " + location.getResourcePath());
-		Path resource = Paths.get(Quantum.getMinecraftDir()
-		                                 .toString(), "quantum", "mods", location.getResourceDomain()
-		                                                                         .split("/")[1], "resources", location.getResourcePath());
-		return new FileInputStream(resource.toFile());
+		return location instanceof QResourceLocation ? ((QResourceLocation) location).retrieve() : super.getInputStream(location);
 	}
 
 	@Override
 	public final boolean resourceExists(ResourceLocation location) {
-		if (location.getResourceDomain().contains("quantum/")) {
-			return true;
+		if (location.getResourceDomain().contains("quantum:") && location instanceof QResourceLocation) {
+			return ((QResourceLocation) location).exists();
 		}
 
 		return super.resourceExists(location);

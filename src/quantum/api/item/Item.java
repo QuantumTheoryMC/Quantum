@@ -27,12 +27,13 @@
  */
 package quantum.api.item;
 
+import quantum.api.MinecraftObject;
+
 /**
  * @author link
  */
-public interface Item {
+public interface Item extends MinecraftObject {
 
-	String getName();
 
 
 }

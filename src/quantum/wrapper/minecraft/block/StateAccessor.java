@@ -159,18 +159,16 @@ public class StateAccessor implements Block.State {
 	}
 
 	@Override
-	public <V> void setProperty(String name, V value) {
-		Property<V> property = new BlockProperty<>(name, value);
-		properties.put(name, property);
+	public <V> StateAccessor setProperty(String name, V value) {
+		Map<String, Property<?>> props = new HashMap<>(properties);
+		props.put(name, new BlockProperty<>(name, value));
+		return new StateAccessor(index, states, props);
 	}
 
 	@Override
 	public List<Property<?>> getProperties() {
-		Set<Map.Entry<String, Property<?>>> entries = this.properties.entrySet();
-		List<Property<?>> properties = new ArrayList<>(entries.size());
-
-
-		properties.addAll(entries.stream().map((Function<Map.Entry<String, Property<?>>, Property<?>>) Map.Entry::getValue).collect(Collectors.toList()));
+		List<Property<?>> properties = new ArrayList<>(this.properties.entrySet().size());
+		properties.addAll(this.properties.entrySet().stream().map((Function<Map.Entry<String, Property<?>>, Property<?>>) Map.Entry::getValue).collect(Collectors.toList()));
 		return properties;
 	}
 
