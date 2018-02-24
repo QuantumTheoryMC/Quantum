@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: Quantum Wrapper
+Class-Path: quantum.jar quantum_api.jar
+Wrapper-Class: quantum.wrapper.Wrapper_1_8

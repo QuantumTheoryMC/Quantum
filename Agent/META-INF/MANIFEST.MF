@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Premain-Class: quantum.agent.Bootstrap
+Agent-Class: quantum.agent.Bootstrap
+Can-Redefine-Classes: true
+Name: Quantum Agent
+Can-Retransform-Classes: true
+Class-Path: quantum_util.jar
+

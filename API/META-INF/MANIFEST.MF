@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: Quantum API
+Class-Path: quantum.jar
+
